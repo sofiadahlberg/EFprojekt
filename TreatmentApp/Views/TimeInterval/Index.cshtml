@@ -1,0 +1,53 @@
+@model IEnumerable<BookingApp.Models.TimeInterval>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Tidsintervall</h1>
+
+<p>
+    <a asp-action="Create">Skapa ny tidsintervall</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Available)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApiKeyRequired)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Available)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApiKeyRequired)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TimeIntervalId" class="btn">Ändra</a> |
+                <a asp-action="Details" asp-route-id="@item.TimeIntervalId" class="btn">Detaljer</a> |
+                <a asp-action="Delete" asp-route-id="@item.TimeIntervalId" class="btn">Radera</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
