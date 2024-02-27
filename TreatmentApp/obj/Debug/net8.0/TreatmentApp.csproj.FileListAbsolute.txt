@@ -286,3 +286,4 @@ C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Tre
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\TreatmentApp\obj\Debug\net8.0\TreatmentApp.pdb
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\TreatmentApp\obj\Debug\net8.0\TreatmentApp.genruntimeconfig.cache
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\TreatmentApp\obj\Debug\net8.0\ref\TreatmentApp.dll
+C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\TreatmentApp\obj\Debug\net8.0\TreatmentApp.sourcelink.json

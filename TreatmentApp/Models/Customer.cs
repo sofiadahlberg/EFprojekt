@@ -19,7 +19,7 @@ public class Customer {
         public bool ApiKeyRequired {get; set; } = false;
 //Foreign Key
 [Display(Name = "Behandling")]
-public int TreatmentId { get; set; }  
+public int? TreatmentId { get; set; }  
 
         // Navigation 
         [Display(Name = "Behandling")]

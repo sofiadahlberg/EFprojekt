@@ -48,7 +48,7 @@ namespace TreatmentApp.Controllers
         // GET: Customer/Create
         public IActionResult Create()
         {
-            ViewData["TreatmentId"] = new SelectList(_context.Treatments, "TreatmentId", "Category");
+            ViewData["TreatmentId"] = new SelectList(_context.Treatments, "TreatmentId", "TreatmentId");
             return View();
         }
 
@@ -57,7 +57,7 @@ namespace TreatmentApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CustomerId,Firstname,Lastname,PhoneNumber,Date,ApiKeyRequired,Category")] Customer customer)
+        public async Task<IActionResult> Create([Bind("CustomerId,Firstname,Lastname,PhoneNumber,Date,ApiKeyRequired,TreatmentId")] Customer customer)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace TreatmentApp.Controllers
             {
                 return NotFound();
             }
-            ViewData["TreatmentId"] = new SelectList(_context.Treatments, "TreatmentId", "Category", customer.TreatmentId);
+            ViewData["TreatmentId"] = new SelectList(_context.Treatments, "TreatmentId", "TreatmentId", customer.TreatmentId);
             return View(customer);
         }
 
