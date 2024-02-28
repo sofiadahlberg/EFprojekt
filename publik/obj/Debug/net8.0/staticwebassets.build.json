@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zfVcu2975PKexFXYI2cnpJFl1zhuJdtr4zBb0NBkfaU=",
+  "Hash": "rPeA6TlPl8H5gTtiHqQvvahLT3VgUbCyRekxPTRCkjY=",
   "Source": "publik",
   "BasePath": "/",
   "Mode": "Root",
@@ -8016,44 +8016,6 @@
       "OriginalItemSpec": "wwwroot\\css\\app.css"
     },
     {
-      "Identity": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
-      "SourceId": "publik",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "css/bootstrap/bootstrap.min.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
-    },
-    {
-      "Identity": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
-      "SourceId": "publik",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "css/bootstrap/bootstrap.min.css.map",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
-    },
-    {
       "Identity": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\favicon.png",
       "SourceId": "publik",
       "SourceType": "Discovered",
@@ -8109,25 +8071,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
-    },
-    {
-      "Identity": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\sample-data\\weather.json",
-      "SourceId": "publik",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "sample-data/weather.json",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\sample-data\\weather.json"
     }
   ]
 }
