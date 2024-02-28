@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GU6ioRXwGxNn3vjmRGD/wPf48XYhoolt8pVlR+5K3MmiPK3znZ2J3wGf9dXordS42bGnBcqRRZi3fL9HV3qKyg==",
+  "dgSpecHash": "1sKbRERWb5xSf32UecF4R2Jjh/476TeNhDiWRprMQpDUSyRAnvn90iAHG6i4OtAQvuMV1L7+4B9f7J2GkS+N6w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\publik.csproj",
   "expectedPackageFiles": [
@@ -37,6 +37,7 @@
     "C:\\Users\\Sofia Dahlberg\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\8.0.2\\microsoft.net.sdk.webassembly.pack.8.0.2.nupkg.sha512",
     "C:\\Users\\Sofia Dahlberg\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Sofia Dahlberg\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
+    "C:\\Users\\Sofia Dahlberg\\.nuget\\packages\\system.net.http.json\\8.0.0\\system.net.http.json.8.0.0.nupkg.sha512",
     "C:\\Users\\Sofia Dahlberg\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\Sofia Dahlberg\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
     "C:\\Users\\Sofia Dahlberg\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\microsoft.netcore.app.runtime.mono.browser-wasm.8.0.2.nupkg.sha512"

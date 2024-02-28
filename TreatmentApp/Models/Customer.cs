@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-namespace BookingApp.Models;
+namespace TreatmentApp.Models; 
 
 public class Customer {
      public int CustomerId { get; set; }

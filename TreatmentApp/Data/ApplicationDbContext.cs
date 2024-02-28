@@ -1,4 +1,4 @@
-﻿using BookingApp.Models;
+﻿using TreatmentApp.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

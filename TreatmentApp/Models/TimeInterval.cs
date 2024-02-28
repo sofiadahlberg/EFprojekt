@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace BookingApp.Models; 
+namespace TreatmentApp.Models; 
 public class TimeInterval{
 
     public int TimeIntervalId {get; set;}
