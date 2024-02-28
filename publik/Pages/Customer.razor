@@ -29,22 +29,42 @@
     .then(data => console.log(data))
     .catch(error => console.error('Error:', error));
 </script>-->
+<form>
+    <div>
+        <label for="firstName">Förnamn:</label>
+        <input id="firstName" @bind="postData.FirstName" />
+    </div>
+    <div>
+        <label for="lastName">Efternamn:</label>
+        <input id="lastName" @bind="postData.LastName" />
+    </div>
+    <div>
+        <label for="phoneNumber">Telefonnummer:</label>
+        <input id="phoneNumber" @bind="postData.PhoneNumber" />
+    </div>
+    <div>
+        <label for="date">Datum:</label>
+        <input id="date" type="date" @bind="postData.Date" />
+    </div>
+    <div>
+        <label for="apiKeyRequired">API Key Required:</label>
+        <input id="apiKeyRequired" type="checkbox" @bind="postData.ApiKeyRequired" />
+    </div>
+    <div>
+        <label for="treatmentId">Treatment ID:</label>
+        <input id="treatmentId" type="number" @bind="postData.TreatmentId" />
+    </div>
 
-<button @onclick="SendPostRequest">Send POST Request</button>
+    <button type="button" @onclick="SendPostRequest">Submit</button>
+</form>
+
+
 
 @code {
+    private CustomerInputModel postData = new CustomerInputModel();
+
     private async Task SendPostRequest()
     {
-        var postData = new
-        {
-            FirstName = "Try",
-            LastName = "Doe",
-            PhoneNumber = "123456789",
-            Date = "2022-03-01", // Set the desired date
-            ApiKeyRequired = false,
-            TreatmentId = 1 // Set the desired TreatmentId
-        };
-
         var apiUrl = "http://localhost:5099/api/customer";
 
         using (var client = new HttpClient())
@@ -53,13 +73,23 @@
 
             if (response.IsSuccessStatusCode)
             {
-              var result = await response.Content.ReadFromJsonAsync<Customer>();
- Console.WriteLine($"POST request successful. Response: {result}");
+                var result = await response.Content.ReadFromJsonAsync<Customer>();
+                Console.WriteLine($"POST request successful. Response: {result}");
             }
             else
             {
                 Console.WriteLine($"POST request failed. Status code: {response.StatusCode}");
             }
         }
+    }
+
+    public class CustomerInputModel
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string PhoneNumber { get; set; }
+        public DateTime Date { get; set; }
+        public bool ApiKeyRequired { get; set; }
+        public int TreatmentId { get; set; }
     }
 }
