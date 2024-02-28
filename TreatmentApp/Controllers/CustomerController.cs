@@ -48,7 +48,7 @@ namespace TreatmentApp.Controllers
         // GET: Customer/Create
         public IActionResult Create()
         {
-            ViewData["TreatmentId"] = new SelectList(_context.Treatments, "TreatmentId", "TreatmentId");
+            ViewData["TreatmentId"] = new SelectList(_context.Treatments, "TreatmentId", "Category");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace TreatmentApp.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["TreatmentId"] = new SelectList(_context.Treatments, "TreatmentId", "TreatmentId", customer.TreatmentId);
+            ViewData["TreatmentId"] = new SelectList(_context.Treatments, "TreatmentId", "Category", customer.TreatmentId);
             return View(customer);
         }
 
@@ -82,7 +82,7 @@ namespace TreatmentApp.Controllers
             {
                 return NotFound();
             }
-            ViewData["TreatmentId"] = new SelectList(_context.Treatments, "TreatmentId", "TreatmentId", customer.TreatmentId);
+            ViewData["TreatmentId"] = new SelectList(_context.Treatments, "TreatmentId", "Category", customer.TreatmentId);
             return View(customer);
         }
 
@@ -118,7 +118,7 @@ namespace TreatmentApp.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["TreatmentId"] = new SelectList(_context.Treatments, "TreatmentId", "TreatmentId", customer.TreatmentId);
+            ViewData["TreatmentId"] = new SelectList(_context.Treatments, "TreatmentId", "Category", customer.TreatmentId);
             return View(customer);
         }
 

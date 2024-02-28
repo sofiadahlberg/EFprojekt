@@ -21,6 +21,16 @@ public async Task<IActionResult> GetCustomers(){
 return Ok(await _context.Customers.ToListAsync());
 }
 
+ [HttpGet("categories")]
+    public IActionResult GetCategories()
+    {
+        var categories = _context.Treatments
+            .Select(t => t.Category)
+            .Distinct()
+            .ToList();
+
+        return Ok(categories);
+    }
 //Postanrop
 [HttpPost]
 public async Task<IActionResult> CreateCustomers([FromBody] Customer customer){

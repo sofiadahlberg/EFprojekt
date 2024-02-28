@@ -42,35 +42,54 @@
         <label for="phoneNumber">Telefonnummer:</label>
         <input id="phoneNumber" @bind="postData.PhoneNumber" />
     </div>
-    <div>
-        <label for="date">Datum:</label>
-        <input id="date" type="date" @bind="DateOfToday" />
-    </div>
+   <div>
+    <label for="dateTime">Datum och tid:</label>
+    <input id="dateTime" type="datetime-local" @bind="DateAndTime" />
+</div>
     <div>
         <label for="apiKeyRequired">API Key Required:</label>
         <input id="apiKeyRequired" type="checkbox" @bind="postData.ApiKeyRequired" />
     </div>
-    <div>
+     <div>
         <label for="treatmentId">Treatment ID:</label>
-        <input id="treatmentId" type="number" @bind="postData.TreatmentId" />
+        <select id="treatmentId" @bind="selectedTreatmentId">
+            <option value="">Vad vill du göra?</option>
+            @foreach (var treatment in TreatmentOptions)
+            {
+                <option value="@treatment.TreatmentId">@treatment.Category</option>
+            }
+        </select>
     </div>
 
     <button type="button" @onclick="SendPostRequest">Submit</button>
 </form>
 
-
-
 @code {
+    private DateTime DateAndTime { get; set; } = DateTime.Now;
+     private List<Treatment> TreatmentOptions = new List<Treatment>();
+    //Visar dagens datum
      private DateTime DateOfToday = DateTime.Today;
-     private void SubmitForm()
-    {
-        // Process the selectedDate as needed
-        Console.WriteLine($"Selected Date: {DateOfToday}");
-    }
+     
     private CustomerInputModel postData = new CustomerInputModel();
+ private int selectedTreatmentId;
+     protected override async Task OnInitializedAsync()
+    {
+        TreatmentOptions = await FetchTreatmentOptionsAsync();
+    }
+
+    private async Task<List<Treatment>> FetchTreatmentOptionsAsync()
+    {
+        using (var client = new HttpClient())
+        {
+            var response = await client.GetFromJsonAsync<List<Treatment>>("http://localhost:5099/api/treatment");
+            return response ?? new List<Treatment>();
+        }
+    }
 
     private async Task SendPostRequest()
     {
+        postData.TreatmentId = selectedTreatmentId;
+
         var UrlAPI = "http://localhost:5099/api/customer";
 
         using (var client = new HttpClient())
@@ -91,11 +110,17 @@
 
     public class CustomerInputModel
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string PhoneNumber { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+        public string? PhoneNumber { get; set; }
         public DateTime Date { get; set; }
         public bool ApiKeyRequired { get; set; }
+         public int TreatmentId { get; set; }
+        
+    }
+    public class Treatment
+    {
         public int TreatmentId { get; set; }
+        public string? Category { get; set; }
     }
 }

@@ -84,7 +84,7 @@ namespace TreatmentApp.Controllers
             {
                 return NotFound();
             }
-            ViewData["TimeIntervalId"] = new SelectList(_context.TimeIntervals, "TimeIntervalId", "TimeIntervalId", treatment.TimeIntervalId);
+            ViewData["TimeIntervalId"] = new SelectList(_context.TimeIntervals, "TimeIntervalId", "StartTime", treatment.TimeIntervalId);
             return View(treatment);
         }
 

@@ -11,7 +11,7 @@ public class Treatment{
        [Required]
     public bool ApiKeyRequired {get; set; } = false;
     //Foreign Keys
-   [Display(Name = "TidsintervallId")]
+   [Display(Name = "Tidsintervall. Visar starttid av intervallen")]
     public int TimeIntervalId { get; set; }
 
      // Navigation 
