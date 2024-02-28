@@ -44,7 +44,7 @@
     </div>
     <div>
         <label for="date">Datum:</label>
-        <input id="date" type="date" @bind="postData.Date" />
+        <input id="date" type="date" @bind="DateOfToday" />
     </div>
     <div>
         <label for="apiKeyRequired">API Key Required:</label>
@@ -61,15 +61,21 @@
 
 
 @code {
+     private DateTime DateOfToday = DateTime.Today;
+     private void SubmitForm()
+    {
+        // Process the selectedDate as needed
+        Console.WriteLine($"Selected Date: {DateOfToday}");
+    }
     private CustomerInputModel postData = new CustomerInputModel();
 
     private async Task SendPostRequest()
     {
-        var apiUrl = "http://localhost:5099/api/customer";
+        var UrlAPI = "http://localhost:5099/api/customer";
 
         using (var client = new HttpClient())
         {
-            var response = await client.PostAsJsonAsync(apiUrl, postData);
+            var response = await client.PostAsJsonAsync(UrlAPI, postData);
 
             if (response.IsSuccessStatusCode)
             {
