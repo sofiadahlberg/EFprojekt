@@ -53,12 +53,12 @@
       "PackagePath": "staticwebassets\\images\\hair-dryer.png"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\images\\hair.jpg",
-      "PackagePath": "staticwebassets\\images\\hair.jpg"
-    },
-    {
       "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\images\\hair1200.jpg",
       "PackagePath": "staticwebassets\\images\\hair1200.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\images\\hair1600(1).jpg",
+      "PackagePath": "staticwebassets\\images\\hair1600(1).jpg"
     },
     {
       "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\images\\hair1600.jpg",
@@ -71,6 +71,10 @@
     {
       "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\images\\hair800(1).jpg",
       "PackagePath": "staticwebassets\\images\\hair800(1).jpg"
+    },
+    {
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\images\\hair800.jpg",
+      "PackagePath": "staticwebassets\\images\\hair800.jpg"
     },
     {
       "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\images\\hairdress.jpg",

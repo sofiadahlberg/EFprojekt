@@ -135,6 +135,7 @@ form {
         font-family: sans-serif;
         box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
         text-align: center;
+        cursor: pointer;
     }
 
     .icon-container1 {
@@ -241,7 +242,7 @@ form {
         font-family: sans-serif;
         box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
         text-align: center;
-
+        cursor: pointer;
     }
 
     .icon-container1 {
@@ -329,7 +330,7 @@ form {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(200px);
         column-gap: 5px;
-
+        cursor: pointer;
     }
 
     /* Container över bilder*/

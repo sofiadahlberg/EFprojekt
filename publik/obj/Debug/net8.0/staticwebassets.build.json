@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "90KTCNhbHsYOqPXTvXloqRMSLk/t4SIi6URNR5GLkxU=",
+  "Hash": "LlVnY06B28WyGY+rab9CvzW+EjXUkfqyCrZr7jbyx9I=",
   "Source": "publik",
   "BasePath": "/",
   "Mode": "Root",
@@ -8187,25 +8187,6 @@
       "OriginalItemSpec": "wwwroot\\images\\hair-dryer.png"
     },
     {
-      "Identity": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\images\\hair.jpg",
-      "SourceId": "publik",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "images/hair.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\hair.jpg"
-    },
-    {
       "Identity": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\images\\hair1200.jpg",
       "SourceId": "publik",
       "SourceType": "Discovered",
@@ -8244,6 +8225,25 @@
       "OriginalItemSpec": "wwwroot\\images\\hair1600.jpg"
     },
     {
+      "Identity": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\images\\hair1600(1).jpg",
+      "SourceId": "publik",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/hair1600(1).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\hair1600(1).jpg"
+    },
+    {
       "Identity": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\images\\hair600.jpg",
       "SourceId": "publik",
       "SourceType": "Discovered",
@@ -8261,6 +8261,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\hair600.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\images\\hair800.jpg",
+      "SourceId": "publik",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/hair800.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\hair800.jpg"
     },
     {
       "Identity": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\publik\\wwwroot\\images\\hair800(1).jpg",
