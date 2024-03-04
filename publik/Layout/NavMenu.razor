@@ -1,4 +1,10 @@
-﻿<!-- HamburgerMenu.razor -->
+﻿
+    <div class="topdiv">
+        <picture>  <source media="(max-width:800px)" srcset="/images/hair600.jpg" alt="Hair Image">
+<source media="(max-width:1024px)" class="headerImg" srcset="/images/hair800.jpg" alt="Hair Image">
+<img src="/images/hair1600.jpg" class="headerImg" alt="Hair Image">
+</picture>  
+</div>
 
 <div class="hamburger-menu">
     <input type="checkbox" id="menu-toggle" @onclick="ToggleMenu">
@@ -9,9 +15,9 @@
     </label>
 
     <ul class="menu-items">
-        <li><NavLink href="" Match="NavLinkMatch.All">Home</NavLink></li>
-        <li><NavLink href="counter">Counter</NavLink></li>
-        <li><NavLink href="customer">Boka tid</NavLink></li>
+        <li><NavLink href="" Match="NavLinkMatch.All" class="aLink">Home</NavLink></li>
+        <li><NavLink href="counter" class="aLink">Counter</NavLink></li>
+        <li><NavLink href="customer" class="aLink">Boka tid</NavLink></li>
     </ul>
 </div>
 

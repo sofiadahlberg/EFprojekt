@@ -1,35 +1,48 @@
 ﻿@page "/customer"
-@using System.Net.Http;
-@using System.Net.Http.Json;
-@using System.Threading.Tasks;
-
+@inject HttpClient Http
 
 <PageTitle>Customer</PageTitle>
 
-<h1>Hello, world!</h1>
-<!--
-<script>
-    const postData = {
-        FirstName: "John",
-        LastName: "Doe",
-        PhoneNumber: "123456789",
-        Date: "2022-03-01", // Set the desired date
-        ApiKeyRequired: false,
-        TreatmentId: 1 // Set the desired TreatmentId
-    };
-
-    fetch("http://localhost:5099/api/customer", {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(postData)
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
-</script>-->
+<h1>Vad vill du göra?</h1>
+<div class="category-container">
+    <div class="@ContainerClass(1)" @onclick="() => SelectContainer(1)">
+        <img src="/images/scissors-128.png" class="customerImg" alt="Scissor">
+        <span>Scissor</span>
+    </div>
+    <div class="@ContainerClass(2)" @onclick="() => SelectContainer(2)">
+        <img src="/images/scissush-128.png" class="customerImg" alt="Scissor and brush">
+        <span>Scissor and Brush</span>
+    </div>
+    <div class="@ContainerClass(3)" @onclick="() => SelectContainer(3)">
+        <img src="/images/hair-dryer-64.png" class="customerImg" alt="Hair Dryer">
+        <span>Hair Dryer</span>
+    </div>
+    <div class="@ContainerClass(4)" @onclick="() => SelectContainer(4)">
+        <img src="/images/palette-128.png" class="customerImg" alt="Color palette">
+        <span>Color Palette</span>
+    </div>
+</div>
 <form>
+    <fieldset>
+    <legend>Bokningsinformation</legend>
+
+    @* <div>
+        <label for="apiKeyRequired">API Key Required:</label>
+        <input id="apiKeyRequired" type="checkbox" @bind="postData.ApiKeyRequired" />
+    </div> *@
+     <div>
+        <label for="treatmentId">Treatment ID:</label>
+        <select id="treatmentId" @bind="selectedTreatmentId">
+            <option value="">Vad vill du göra?</option>
+            @foreach (var treatment in TreatmentOptions)
+            {
+                <option value="@treatment.TreatmentId">@treatment.Category</option>
+            }
+        </select>
+    </div>
+    </fieldset>
+    <fieldset>
+        <legend>Personlig information</legend>
     <div>
         <label for="firstName">Förnamn:</label>
         <input id="firstName" @bind="postData.FirstName" />
@@ -46,26 +59,16 @@
     <label for="dateTime">Datum och tid:</label>
     <input id="dateTime" type="datetime-local" @bind="DateAndTime" />
 </div>
-    <div>
-        <label for="apiKeyRequired">API Key Required:</label>
-        <input id="apiKeyRequired" type="checkbox" @bind="postData.ApiKeyRequired" />
-    </div>
-     <div>
-        <label for="treatmentId">Treatment ID:</label>
-        <select id="treatmentId" @bind="selectedTreatmentId">
-            <option value="">Vad vill du göra?</option>
-            @foreach (var treatment in TreatmentOptions)
-            {
-                <option value="@treatment.TreatmentId">@treatment.Category</option>
-            }
-        </select>
-    </div>
+</fieldset>
+
 
     <button type="button" @onclick="SendPostRequest">Submit</button>
 </form>
 
 @code {
     private DateTime DateAndTime { get; set; } = DateTime.Now;
+
+
      private List<Treatment> TreatmentOptions = new List<Treatment>();
     //Visar dagens datum
      private DateTime DateOfToday = DateTime.Today;
@@ -107,6 +110,13 @@
             }
         }
     }
+
+    int selectedContainer = 0;
+
+    string ContainerClass(int containerNumber) =>
+        selectedContainer == containerNumber ? "icon-container clicked" : "icon-container" + containerNumber + " not-selected";
+    void SelectContainer(int containerNumber) =>
+        selectedContainer = containerNumber;
 
     public class CustomerInputModel
     {

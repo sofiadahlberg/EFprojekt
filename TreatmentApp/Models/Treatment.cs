@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace TreatmentApp.Models; 
+namespace TreatmentApp.Models{
 public class Treatment{
     //Properties
     public int TreatmentId { get; set; }
@@ -18,4 +18,5 @@ public class Treatment{
       [Display(Name = "Tidsintervall")]
     public TimeInterval? TimeInterval { get; set; }
      public ICollection<Customer>? Customers { get; set; }
+}
 }

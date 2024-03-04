@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace TreatmentApp.Controllers
 {
-        [Authorize]
+        
     public class TimeIntervalController : Controller
     {
         private readonly ApplicationDbContext _context;

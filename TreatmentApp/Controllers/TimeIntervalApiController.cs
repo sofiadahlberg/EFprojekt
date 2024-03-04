@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TreatmentApp.Data;
+using TreatmentApp.Models;
 
 namespace MyApp.Namespace
 {
