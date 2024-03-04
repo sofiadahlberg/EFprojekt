@@ -31,18 +31,25 @@
         <input id="apiKeyRequired" type="checkbox" @bind="postData.ApiKeyRequired" />
         </div> *@
         <div>
-            <label>Vad vill du göra?</label>
-            @foreach (var treatment in TreatmentOptions.Where(t =>
+    <label>Vad vill du göra?</label>
+    @if (categoryTreatmentIds.ContainsKey(selectedContainer))
+    {
+        foreach (var treatment in TreatmentOptions.Where(t =>
             categoryTreatmentIds[selectedContainer].Contains(t.TreatmentId)))
-            {
-                <div>
-                    <input type="radio" id="@($"treatmentId_{treatment.TreatmentId}")" name="treatmentOptions"
-                        value="@treatment.TreatmentId" checked="@(selectedTreatmentId == treatment.TreatmentId)"
-                        @onchange="() => selectedTreatmentId = treatment.TreatmentId" />
-                    <label for="@($"treatmentId_{treatment.TreatmentId}")">@treatment.Category</label>
-                </div>
-            }
-        </div>
+        {
+            <div>
+                <input type="radio" id="@($"treatmentId_{treatment.TreatmentId}")" name="treatmentOptions"
+                       value="@treatment.TreatmentId" checked="@(selectedTreatmentId == treatment.TreatmentId)"
+                       @onchange="() => selectedTreatmentId = treatment.TreatmentId" />
+                <label for="@($"treatmentId_{treatment.TreatmentId}")">@treatment.Category</label>
+            </div>
+        }
+    }
+    else
+    {
+        <p>No treatments available for the selected category.</p>
+    }
+</div>
 
     </fieldset>
     <fieldset>
@@ -59,9 +66,9 @@
             <label for="phoneNumber">Telefonnummer:</label>
             <input id="phoneNumber" @bind="postData.PhoneNumber" />
         </div>
-        <div>
-            <label for="dateTime">Datum och tid:</label>
-            <input id="dateTime" type="datetime-local" @bind="DateAndTime" />
+          <div>
+            <label for="DateTime">Datum och tid:</label>
+            <input id="DateTime" type="datetime-local" @bind="postData.Date" />
         </div>
     </fieldset>
 
@@ -70,16 +77,15 @@
 </form>
 
 @code {
-    private DateTime DateAndTime { get; set; } = DateTime.Now;
-
+ 
 
     private List<Treatment> TreatmentOptions = new List<Treatment>();
     //Visar dagens datum
-    private DateTime DateOfToday = DateTime.Today;
-    private int selectedContainer = 0;
+       private int selectedContainer = 0;
     private int selectedTreatmentId = 0;
+   
 
-    private CustomerInputModel postData = new CustomerInputModel();
+    private CustomerModel postData = new CustomerModel();
 
 
     protected override async Task OnInitializedAsync()
@@ -107,6 +113,7 @@
 
         using (var client = new HttpClient())
         {
+            
             var response = await client.PostAsJsonAsync(UrlAPI, postData);
 
             if (response.IsSuccessStatusCode)
@@ -134,14 +141,15 @@
 { 4, new List<int> { 1, 5, 6 } },
 //Id för styling av hår
 { 3, new List<int> { 11, 12, 13 } },
-//Id för färg
+//Id förärg
 { 2, new List<int> { 4, 9, 10 } }
 };
     void SelectContainer(int containerNumber)
     {
         selectedContainer = containerNumber;
         selectedTreatmentId = 0; // Set to 0 initially
-                                 // Update the selectedTreatmentId based on the selected category Uppdaterar valt Id beroende på vilken kategori som väljs.
+        
+                                 // Update the selectedTreatmentId based on the selected category Uppdaterar valt Id beroende på vilken kategori somväljs.
         selectedTreatmentId = categoryTreatmentIds.ContainsKey(containerNumber) ?
         categoryTreatmentIds[containerNumber].FirstOrDefault() :
         0;
@@ -150,7 +158,7 @@
         Console.WriteLine($"Selected Treatment ID: {selectedTreatmentId}");
     }
 
-    public class CustomerInputModel
+    public class CustomerModel
     {
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
