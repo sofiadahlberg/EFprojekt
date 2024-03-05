@@ -93,7 +93,7 @@
         TreatmentOptions = await FetchTreatmentOptionsAsync();
     }
 
-    private async Task<List<Treatment>> FetchTreatmentOptionsAsync(string category = null)
+    private async Task<List<Treatment>> FetchTreatmentOptionsAsync(string? category = null)
     {
         using (var client = new HttpClient())
         {
@@ -103,14 +103,10 @@
             return response ?? new List<Treatment>();
         }
     }
-
-
     private async Task SendPostRequest()
     {
         postData.TreatmentId = selectedTreatmentId;
-
         var UrlAPI = "http://localhost:5099/api/customer";
-
         using (var client = new HttpClient())
         {
             
@@ -128,12 +124,13 @@
         }
     }
 
-
     //För att välja en av de olika ikonerna / kategorierna
     string ContainerClass(int containerNumber) =>
-    selectedContainer == containerNumber ? "icon-container clicked" : "icon-container" + containerNumber + " not-selected";
+    selectedContainer == containerNumber ? "icon-container clicked" 
+    : "icon-container" + containerNumber + " not-selected";
 
-    private Dictionary<int, List<int>> categoryTreatmentIds = new Dictionary<int, List<int>>
+    private Dictionary<int, List<int>> categoryTreatmentIds
+         = new Dictionary<int, List<int>>
 {
 //Id för klippning
 { 1, new List<int> { 7, 8, 3 } },
@@ -147,9 +144,9 @@
     void SelectContainer(int containerNumber)
     {
         selectedContainer = containerNumber;
-        selectedTreatmentId = 0; // Set to 0 initially
+        selectedTreatmentId = 0; 
         
-                                 // Update the selectedTreatmentId based on the selected category Uppdaterar valt Id beroende på vilken kategori somväljs.
+            // Uppdaterar valt Id beroende på vilken kategori somväljs.
         selectedTreatmentId = categoryTreatmentIds.ContainsKey(containerNumber) ?
         categoryTreatmentIds[containerNumber].FirstOrDefault() :
         0;
@@ -163,7 +160,7 @@
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? PhoneNumber { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime? Date { get; set; }
         public bool ApiKeyRequired { get; set; }
         public int TreatmentId { get; set; }
 

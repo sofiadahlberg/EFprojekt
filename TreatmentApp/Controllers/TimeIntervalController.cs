@@ -150,6 +150,7 @@ namespace TreatmentApp.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        
 
         private bool TimeIntervalExists(int id)
         {

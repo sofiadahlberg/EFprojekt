@@ -32,9 +32,13 @@
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.TimeInterval)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TimeInterval.TimeIntervalId)
-        </dd>
+       
+        <dd class="col-sm-10">
+    @if (Model.TimeInterval != null)
+    {
+        @Model.TimeInterval.TimeIntervalId
+    }
+</dd>
     </dl>
     
     <form asp-action="Delete">

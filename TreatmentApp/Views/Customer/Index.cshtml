@@ -52,8 +52,12 @@
                 @Html.DisplayFor(modelItem => item.ApiKeyRequired)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Treatment.TreatmentId)
-            </td>
+    @if (item.Treatment != null)
+    {
+        @item.Treatment.Category
+    }
+</td>
+
             <td>
                 <a asp-action="Edit" asp-route-id="@item.CustomerId" class="btn">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.CustomerId"class="btn">Details</a> |

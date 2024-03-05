@@ -19,5 +19,30 @@ namespace MyApp.Namespace
 public async Task<IActionResult> GetTimeIntervals(){
 return Ok(await _context.TimeIntervals.ToListAsync());
 }
+    
+    [HttpDelete("{id}")]
+public async Task<IActionResult> DeleteTimeInterval(int id)
+{
+    try
+    {
+        var timeInterval = await _context.TimeIntervals.FindAsync(id);
+
+        if (timeInterval == null)
+        {
+            return NotFound(); // Return 404 Not Found if the record doesn't exist
+        }
+
+        _context.TimeIntervals.Remove(timeInterval);
+        await _context.SaveChangesAsync();
+
+        return NoContent(); // Return 204 No Content on successful deletion
     }
+    catch (Exception ex)
+    {
+        // Log or handle the exception as needed
+        return StatusCode(500, $"Internal Server Error: {ex.Message}");
+    }
+}
+    }
+
 }
