@@ -50,6 +50,18 @@ h1 {
     margin: 6px 0;
     transition: 0.4s;
 }
+/* Knapp home + hover*/
+.HomeBtn{
+background-color: rgb(3, 33, 3);
+color: #ffffff;
+cursor: pointer;
+
+}
+.HomeBtn:hover{
+    background-color: rgb(90, 157, 90);
+    color: #000000;
+    border: 2px solid #000000;
+}
 
 #menu-toggle {
     display: none;
@@ -78,7 +90,8 @@ h1 {
 
 }
 
-/* Formulär*/
+
+/* Formulär på boka tid*/
 form {
 
     margin-top: 5%;
@@ -102,8 +115,23 @@ form {
         margin: 0 auto;
       
     }
-
-    /*Main*/
+    /*Home*/
+.openingHoursDiv{
+    margin: 0 auto;
+    width: 300px;
+  border: 1px solid #a7a8a8; /* Add a border to enhance the effect */
+    padding: 10px; /* Adjust padding as needed *
+        /* Box Shadow */
+        box-shadow: inset 0 0 19px rgba(0, 0, 0, 0.5); /* Adjust the color and size of the shadow */
+}
+.h2openingHours{
+    text-align: center;
+    font-size: 18px;
+}
+li {
+    list-style: none;
+    line-height: 25px;
+}    
     /*Customer*/
     /*Container över imgdivarna */
     .category-container {
@@ -166,7 +194,7 @@ form {
     }
 
     .icon-container.clicked {
-        border: blue 3px solid;
+        border: rgb(19, 84, 188) 3px solid;
         /* Border color for the clicked div */
         background-color: #d1cfcf;
         padding: 20px;
@@ -192,7 +220,13 @@ form {
         height: 80px;
     }
 
-
+/* Knapp home*/
+.HomeBtn{
+    padding: 3%;
+    margin-bottom: 3%;
+    float: right;
+    margin-right: 5%;
+    }
 }
 
 @media only screen and (min-width: 801px) and (max-width: 1024px) {
@@ -276,7 +310,7 @@ form {
     }
 
     .icon-container.clicked {
-        border: blue 3px solid;
+        border: rgb(19, 84, 188) 3px solid;
         /* Border color for the clicked div */
         background-color: #d1cfcf;
         padding: 20px;
@@ -385,7 +419,7 @@ form {
     }
 
     .icon-container.clicked {
-        border: blue 3px solid;
+        border: rgb(19, 84, 188) 3px solid;
         /* Border color for the clicked div */
         background-color: #d1cfcf;
         padding: 20px;

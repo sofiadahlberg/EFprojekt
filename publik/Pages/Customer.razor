@@ -31,7 +31,7 @@
         <input id="apiKeyRequired" type="checkbox" @bind="postData.ApiKeyRequired" />
         </div> *@
         <div>
-    <label>Vad vill du göra?</label>
+    <label>Vilken vill du boka?</label>
     @if (categoryTreatmentIds.ContainsKey(selectedContainer))
     {
         foreach (var treatment in TreatmentOptions.Where(t =>
@@ -47,7 +47,7 @@
     }
     else
     {
-        <p>No treatments available for the selected category.</p>
+        <p>Du måste först välja en behandling innan du kan boka</p>
     }
 </div>
 

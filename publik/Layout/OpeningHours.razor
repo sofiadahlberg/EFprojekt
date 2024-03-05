@@ -1,0 +1,87 @@
+@inherits LayoutComponentBase
+@using publik.Layout
+
+<div class="openingHoursDiv">
+    <h2 class="h2openingHours">Våra öppettider under vecka 12:</h2>
+<ul>
+    @foreach (var timeInterval in timeIntervals)
+    {
+        <li> @GetOpeningTime(timeInterval.StartTime, timeInterval.EndTime) 
+             @if (timeInterval.Available)
+              {
+                <span> Tider finns att boka</span>
+            }
+            else
+            {
+                <span> Fullbokat</span>
+            }
+             </li>
+    }
+</ul>
+</div>
+
+@code {
+    List<TimeInterval> timeIntervals = new List<TimeInterval>();
+         protected override async Task OnInitializedAsync()
+    {
+        using (var httpClient = new HttpClient())
+        {
+            var response = await httpClient.GetFromJsonAsync<List<TimeInterval>>("http://localhost:5099/api/timeinterval");
+
+            if (response != null)
+            {
+                timeIntervals = response;
+            }
+        }
+
+    }
+
+    // TimeIntervall
+    public class TimeInterval
+    {
+        public int TimeIntervalId { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public bool Available { get; set; }
+
+    }
+
+    //Metod för att skriva ut öppettiderna beroende på veckodag
+    private string GetOpeningTime(DateTime startTime, DateTime endTime)
+    {
+        string dayOfWeek = GetSwedish(startTime.DayOfWeek);
+
+        if (startTime.TimeOfDay == TimeSpan.FromHours(9) && endTime.TimeOfDay == TimeSpan.FromHours(17))
+        {
+            return $"{dayOfWeek}: 9-17";
+        }
+        else 
+        {
+            return $"{dayOfWeek}: {startTime.Hour} - {endTime.Hour}";
+        }
+    }
+
+    // Method to get Swedish day name
+private string GetSwedish(DayOfWeek dayOfWeek)
+{
+    switch (dayOfWeek)
+    {
+        case DayOfWeek.Monday:
+            return "Måndag";
+        case DayOfWeek.Tuesday:
+            return "Tisdag";
+        case DayOfWeek.Wednesday:
+            return "Onsdag";
+        case DayOfWeek.Thursday:
+            return "Torsdag";
+        case DayOfWeek.Friday:
+            return "Fredag";
+        case DayOfWeek.Saturday:
+            return "Lördag";
+        case DayOfWeek.Sunday:
+            return "Söndag";
+        default:
+            return string.Empty;
+    }
+}
+}
