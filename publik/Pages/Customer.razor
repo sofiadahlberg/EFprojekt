@@ -1,5 +1,6 @@
 ﻿@page "/customer"
 @inject HttpClient Http
+@using System.Globalization 
 
 <PageTitle>Customer</PageTitle>
 
@@ -22,8 +23,10 @@
         <span>Färg</span>
     </div>
 </div>
+ <OpeningHours/>
 <form>
     <fieldset>
+       
         <legend>Bokningsinformation</legend>
 
         @* <div>
@@ -73,7 +76,7 @@
     </fieldset>
 
 
-    <button type="button" @onclick="SendPostRequest">Submit</button>
+    <button type="button" @onclick="SendPostRequest" disabled="@NotOpeningHours()">Submit</button>
 </form>
 
 @code {
@@ -103,6 +106,39 @@
             return response ?? new List<Treatment>();
         }
     }
+
+  private bool NotOpeningHours()
+    {
+        var selectedDate = postData.Date?.ToLocalTime();
+        // Define your allowed week (Week 12)
+        var allowedWeek = 12;
+
+  // Check if the selected date is within the allowed week
+        if (selectedDate.HasValue && CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(selectedDate.Value, CalendarWeekRule.FirstDay, DayOfWeek.Monday) == allowedWeek)
+        {
+        // Define your opening hours
+        var openingHours = new Dictionary<DayOfWeek, (TimeSpan opening, TimeSpan closing)>
+        {
+            [DayOfWeek.Monday] = (new TimeSpan(9, 0, 0), new TimeSpan(17, 0, 0)),
+            [DayOfWeek.Tuesday] = (new TimeSpan(9, 0, 0), new TimeSpan(17, 0, 0)),
+            [DayOfWeek.Wednesday] = (new TimeSpan(9, 0, 0), new TimeSpan(17, 0, 0)),
+            [DayOfWeek.Thursday] = (new TimeSpan(9, 0, 0), new TimeSpan(17, 0, 0)),
+            [DayOfWeek.Friday] = (new TimeSpan(9, 0, 0), new TimeSpan(14, 0, 0)),
+        };
+
+        // Check if the selected date and time are within opening hours
+        if (selectedDate.HasValue && openingHours.ContainsKey(selectedDate.Value.DayOfWeek))
+        {
+            var (opening, closing) = openingHours[selectedDate.Value.DayOfWeek];
+            return !(selectedDate.Value.TimeOfDay >= opening && selectedDate.Value.TimeOfDay <= closing);
+        }
+        }
+
+        // If the selected date is on Saturday or Sunday, return true (outside opening hours)
+        return true;
+    }
+
+    
     private async Task SendPostRequest()
     {
         postData.TreatmentId = selectedTreatmentId;
@@ -115,7 +151,7 @@
             if (response.IsSuccessStatusCode)
             {
                 var result = await response.Content.ReadFromJsonAsync<Customer>();
-                Console.WriteLine($"POST request successful. Response: {result}");
+                
             }
             else
             {
@@ -135,9 +171,9 @@
 //Id för klippning
 { 1, new List<int> { 7, 8, 3 } },
 ////Id för klipp och färg
-{ 4, new List<int> { 1, 5, 6 } },
+{ 4, new List<int> { 5, 6, 15 } },
 //Id för styling av hår
-{ 3, new List<int> { 11, 12, 13 } },
+{ 3, new List<int> { 11, 13, 16 } },
 //Id förärg
 { 2, new List<int> { 4, 9, 10 } }
 };
@@ -151,8 +187,6 @@
         categoryTreatmentIds[containerNumber].FirstOrDefault() :
         0;
 
-        Console.WriteLine($"Selected Container: {selectedContainer}");
-        Console.WriteLine($"Selected Treatment ID: {selectedTreatmentId}");
     }
 
     public class CustomerModel
