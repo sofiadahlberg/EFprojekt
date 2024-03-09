@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("publik")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bbb65c450a78a3feaecd572fbcb4a1e932adc179")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed475a5f2ab95e1d384d6c3a969c1709c131228c")]
 [assembly: System.Reflection.AssemblyProductAttribute("publik")]
 [assembly: System.Reflection.AssemblyTitleAttribute("publik")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
