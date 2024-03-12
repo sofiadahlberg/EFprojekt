@@ -1,0 +1,20 @@
+@inject NavigationManager Navigation
+<footer>
+    <div class="footerclass">
+<b> Uppgifter:</b><br><br>
+<address>
+<a class="mailtext" href="ruddeby@outlook.com">ruddeby@outlook.com</a>
+<p> 070- 000 00 00</p>
+<p> Lötgatan 23 - Roxnäs</p>
+    </address>
+
+</div>
+    <button class="AvailableBtn" @onclick="AvailablePage">Tillgänglighetsredogörelse</button>
+</footer>
+@code {
+    //Navigering till customer.razor
+    private void AvailablePage()
+    {
+        Navigation.NavigateTo("/available");
+    }
+}

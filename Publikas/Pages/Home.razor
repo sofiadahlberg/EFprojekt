@@ -1,0 +1,43 @@
+@page "/"
+@inject NavigationManager Navigation
+
+
+<PageTitle>Home</PageTitle>
+ 
+<h1>Ruddeby's frisör</h1>
+<button class="HomeBtn" @onclick="CustomerPage">Boka här</button>
+
+<div class="home-container">
+    
+<div class="opening-hours-container mobile-reorder">
+<OpeningHours />
+</div>
+    <div class="home-text-btn">
+        <h2 class="h2Home">Din frisör i Ruddeby</h2>
+    <p class="textHome"> Välkommen till Ruddebys Frisör, 
+    där skönhet och stil möts i en avslappnad
+    och trivsam atmosfär. Vi är passionerade
+    frisörer som älskar att skapa unika och 
+    personliga frisyrer för varje individ.
+    Oavsett om du är ute efter en trendig klippning,
+    färgstarka lockar eller en klassisk look,
+    är du i trygga händer hos oss. 
+    Ta en paus från vardagen och låt oss vårda
+    ditt hår och lyfta fram din naturliga skönhet. 
+    Vi ser fram emot att välkomna dig till vår salong
+    för en upplevelse av professionell service och 
+    skräddarsydd hårvård. Ruddebys Frisör –
+    där din skönhet får stråla!
+</p>
+</div>
+
+</div>
+@code {
+    //Navigering till customer.razor
+    private void CustomerPage()
+    {
+        Navigation.NavigateTo("/customer");
+    }
+}
+
+ 

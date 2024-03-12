@@ -1,0 +1,80 @@
+﻿
+    <div class="topdiv">
+        <picture>  <source media="(max-width:800px)" srcset="/images/hair600.jpg" alt="Hair Image">
+<source media="(max-width:1024px)" class="headerImg" srcset="/images/hair800.jpg" alt="Hair Image">
+<img src="/images/hair1600.jpg" class="headerImg" alt="Hair Image">
+</picture>  
+</div>
+
+<div class="hamburger-menu">
+    <input type="checkbox" id="menu-toggle" @onclick="ToggleMenu">
+    <label for="menu-toggle" class="menu-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </label>
+
+    <ul class="menu-items">
+       
+        <li>
+            <NavLink href="" class="aLink">Startsida</NavLink>
+            </li>
+        <li>
+            <NavLink href="customer" class="aLink">Boka tid</NavLink>
+            </li> 
+        <li>
+            <NavLink href="about" class="aLink">Om oss</NavLink>
+            </li>
+    </ul>
+</div>
+
+@code {
+    private bool isMenuOpen = false;
+
+    private void ToggleMenu()
+    {
+        isMenuOpen = !isMenuOpen;
+    }
+}
+
+
+@* <div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Publikas</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="counter">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="weather">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
+            </NavLink>
+        </div>
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
+ *@

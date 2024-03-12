@@ -1,0 +1,279 @@
+﻿@page "/customer"
+@inject HttpClient Http
+@using System.Globalization
+@using System.ComponentModel.DataAnnotations
+@using System.Collections.Generic
+
+
+
+<PageTitle>Customer</PageTitle>
+
+<h1>Vad vill du göra?</h1>
+<div class="category-container">
+    <div class="@ContainerClass(1)" @onclick="() => SelectContainer(1)">
+        <img src="/images/scissors-128.png" class="customerImg" alt="Sax-ikon">
+        <span>Klippning</span>
+    </div>
+    <div class="@ContainerClass(2)" @onclick="() => SelectContainer(2)">
+        <img src="/images/scissush-128.png" class="customerImg" alt="En Sax och en pensel">
+        <span>Klipp & Färg</span>
+    </div>
+    <div class="@ContainerClass(3)" @onclick="() => SelectContainer(3)">
+        <img src="/images/hair-dryer-64.png" class="customerImg" alt="Hårfön">
+        <span>Styling av hår</span>
+    </div>
+    <div class="@ContainerClass(4)" @onclick="() => SelectContainer(4)">
+        <img src="/images/palette-128.png" class="customerImg" alt="Färgpalett">
+        <span>Färg</span>
+    </div>
+</div>
+
+<div class="form-container">
+    <div class="opening-hours-container">
+        <OpeningHours />
+    </div>
+    <form>
+        <fieldset>
+
+            <legend>Bokningsinformation</legend>
+            <div>
+                <label>Vilken vill du boka?</label>
+                @if (categoryTreatmentIds.ContainsKey(selectedContainer))
+                {
+                    foreach (var treatment in TreatmentOptions.Where(t =>
+                    categoryTreatmentIds[selectedContainer].Contains(t.TreatmentId)))
+                    {
+                        <div>
+                            <input type="radio" id="@($"treatmentId_{treatment.TreatmentId}")" name="treatmentOptions"
+                                value="@treatment.TreatmentId" checked="@(selectedTreatmentId == treatment.TreatmentId)"
+                                @onchange="() => selectedTreatmentId = treatment.TreatmentId" />
+                            <label for="@($"treatmentId_{treatment.TreatmentId}")">@treatment.Category</label>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p>Du måste först välja en behandling innan du kan boka</p>
+                }
+            </div>
+
+        </fieldset>
+        <fieldset>
+            <legend>Personlig information</legend>
+            <div>
+                <label for="firstName">Förnamn:</label>
+                <input id="firstName" @bind="postData.FirstName" />
+            </div>
+            <div>
+                <label for="lastName">Efternamn:</label>
+                <input id="lastName" @bind="postData.LastName" />
+            </div>
+            <div>
+                <label for="phoneNumber">Telefonnummer:</label>
+                <input id="phoneNumber" @bind="postData.PhoneNumber" />
+            </div>
+            <div>
+                <label for="DateTime">Datum och tid:</label>
+                <input id="DateTime" type="datetime-local" @bind="postData.Date" />
+            </div>
+           @*  <div class="error-message">
+                @if (NotOpeningHours())
+                {
+                    <p>Vald tid eller datum är inte tillgänglig. Vänligen välj en annan.</p>
+                }
+            </div> *@
+        </fieldset>
+        <div class="success-message">
+            @if (isPostSuccessful)
+            {
+                <b>Meddelande skickat!</b>
+            }
+        </div>
+
+
+        <button class="BookBtn" type="button" @onclick="SendPostRequest" disabled="@NotOpeningHours()">Boka Tid</button>
+    </form>
+
+
+</div>
+
+
+@code {
+    @* private bool isDateOrTimeUnavailable = false; *@
+
+    private List<Treatment> TreatmentOptions = new List<Treatment>();
+    //Visar dagens datum
+    private int selectedContainer = 0;
+    private int selectedTreatmentId = 0;
+    private CustomerModel postData = new CustomerModel();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        TreatmentOptions = await FetchTreatmentOptionsAsync();
+    }
+
+    private async Task<List<Treatment>> FetchTreatmentOptionsAsync(string? category = null)
+    {
+        using (var client = new HttpClient())
+        {
+            // Skicka vald kategori till API för att sortera
+            var apiUrl = $"http://localhost:5099/api/treatment?category={category}";
+            var response = await client.GetFromJsonAsync<List<Treatment>>("http://localhost:5099/api/treatment");
+            return response ?? new List<Treatment>();
+        }
+    }
+    private ICollection<ValidationResult> ValidateForm()
+    {
+        var validationErrors = new List<ValidationResult>();
+        var validationContext = new ValidationContext(postData, serviceProvider: null, items: null);
+
+        // Validate the form using data annotations
+        var isValid = Validator.TryValidateObject(postData, validationContext, validationErrors, validateAllProperties: true);
+
+        return validationErrors;
+    }
+
+  private bool NotOpeningHours()
+{
+    var selectedDate = postData.Date?.ToLocalTime();
+
+    if (selectedDate.HasValue)
+    {
+        // Define your allowed week (Week 12)
+        var allowedWeek = 12;
+
+        // Check if the selected date is within the allowed week
+        if (CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(selectedDate.Value, CalendarWeekRule.FirstDay, DayOfWeek.Monday) != allowedWeek)
+        {
+            Console.WriteLine($"Invalid week. Expected: {allowedWeek}, Actual: {CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(selectedDate.Value, CalendarWeekRule.FirstDay, DayOfWeek.Monday)}, Date: {selectedDate.Value}");
+            return true; // Return true if not in the allowed week
+        }
+
+        // Define your opening hours
+        var openingHours = new Dictionary<DayOfWeek, (TimeSpan opening, TimeSpan closing)>
+        {
+            [DayOfWeek.Monday] = (new TimeSpan(9, 0, 0), new TimeSpan(17, 0, 0)),
+            [DayOfWeek.Tuesday] = (new TimeSpan(9, 0, 0), new TimeSpan(17, 0, 0)),
+            [DayOfWeek.Wednesday] = (new TimeSpan(9, 0, 0), new TimeSpan(17, 0, 0)),
+            [DayOfWeek.Thursday] = (new TimeSpan(9, 0, 0), new TimeSpan(17, 0, 0)),
+            [DayOfWeek.Friday] = (new TimeSpan(9, 0, 0), new TimeSpan(14, 0, 0)),
+        };
+
+        // Check if the selected date is a valid day
+        if (openingHours.ContainsKey(selectedDate.Value.DayOfWeek))
+        {
+            var (opening, closing) = openingHours[selectedDate.Value.DayOfWeek];
+            return !(selectedDate.Value.TimeOfDay >= opening && selectedDate.Value.TimeOfDay <= closing);
+        }
+    }
+
+    // If the selected date is on Saturday or Sunday, return true (outside opening hours)
+    return true;
+}
+
+    private bool isPostSuccessful = false;
+
+    private async Task SendPostRequest()
+    {
+        try{
+
+        Console.WriteLine("Sent post request!"); // Add this line
+        
+           
+        var validationErrors = ValidateForm();
+
+        // Check if the date or time is not available
+       @*  if (NotOpeningHours())
+        { *@
+        
+            if (validationErrors.Any())
+            {
+                Console.WriteLine("Validation errors found.");
+                return;
+            }
+
+            postData.TreatmentId = selectedTreatmentId;
+             // Print out the data before sending
+        Console.WriteLine("Data to be sent:");
+        Console.WriteLine($"FirstName: {postData.FirstName}");
+        Console.WriteLine($"LastName: {postData.LastName}");
+        Console.WriteLine($"PhoneNumber: {postData.PhoneNumber}");
+        Console.WriteLine($"Date: {postData.Date}");
+        Console.WriteLine($"TreatmentId: {postData.TreatmentId}");
+
+            var UrlAPI = "http://localhost:5099/api/customer";
+
+            using (var client = new HttpClient())
+            {
+
+                var response = await client.PostAsJsonAsync(UrlAPI, postData);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    isPostSuccessful = true;
+                    var result = await response.Content.ReadFromJsonAsync<Customer>();
+                         Console.WriteLine("POST request successful!");
+                }
+                else
+                {
+                    isPostSuccessful = false;
+                    Console.WriteLine($"POST request failed. Status code: {response.StatusCode}");
+
+                }
+            }
+
+       @*  } *@
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Exception: {ex.Message}");
+    }
+    
+}
+
+    //För att välja en av de olika ikonerna / kategorierna
+    string ContainerClass(int containerNumber) =>
+    selectedContainer == containerNumber ? "icon-container clicked"
+    : "icon-container" + containerNumber + " not-selected";
+
+    private Dictionary<int, List<int>> categoryTreatmentIds
+    = new Dictionary<int, List<int>>
+        {
+//Id för klippning
+{ 1, new List<int> { 7, 8, 3 } },
+////Id för klipp och färg
+{ 4, new List<int> { 5, 6, 15 } },
+//Id för styling av hår
+{ 3, new List<int> { 11, 13, 16 } },
+//Id förärg
+{ 2, new List<int> { 4, 9, 10 } }
+        };
+    void SelectContainer(int containerNumber)
+    {
+        selectedContainer = containerNumber;
+        selectedTreatmentId = 0;
+
+        // Uppdaterar valt Id beroende på vilken kategori somväljs.
+        selectedTreatmentId = categoryTreatmentIds.ContainsKey(containerNumber) ?
+        categoryTreatmentIds[containerNumber].FirstOrDefault() :
+        0;
+
+    }
+
+    public class CustomerModel
+    {
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
+        public string? PhoneNumber { get; set; }
+        public DateTime? Date { get; set; }
+        public bool ApiKeyRequired { get; set; }
+        public int TreatmentId { get; set; }
+
+    }
+    public class Treatment
+    {
+        public int TreatmentId { get; set; }
+        public string? Category { get; set; }
+    }
+}
