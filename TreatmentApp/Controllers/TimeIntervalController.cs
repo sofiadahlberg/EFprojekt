@@ -56,7 +56,7 @@ namespace TreatmentApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TimeIntervalId,StartTime,EndTime,Available,ApiKeyRequired")] TimeInterval timeInterval)
+        public async Task<IActionResult> Create([Bind("TimeIntervalId,StartTime,EndTime,Available")] TimeInterval timeInterval)
         {
             if (ModelState.IsValid)
             {

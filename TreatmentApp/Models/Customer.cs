@@ -18,7 +18,6 @@ public class Customer
   [Display(Name = "Datum ")]
   public DateTime Date { get; set; }
   [Required]
-  public bool ApiKeyRequired { get; set; } = false;
   //Foreign Key
   [Display(Name = "Behandling")]
   public int? TreatmentId { get; set; }

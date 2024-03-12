@@ -9,7 +9,7 @@ public class Treatment{
      [Display(Name = "Behandling")]
     public string? Category { get; set; }
        [Required]
-    public bool ApiKeyRequired {get; set; } = false;
+   
     //Foreign Keys
    [Display(Name = "Tidsintervall. Visar starttid av intervallen")]
     public int TimeIntervalId { get; set; }

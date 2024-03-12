@@ -104,16 +104,21 @@ form {
 
 }
 
-/*Footer*/
-.footerclass{
-    background-color: rgb(3, 33, 3);
-    color: #ffffff;
+/*about*/
+.mailtext{
+color: #ffffff;
+text-decoration: none;
+}
+
+.mailtext:hover{
+    text-decoration: underline;
 }
 
 
 
-
 @media only screen and (max-width: 800px) {
+  
+
 
     /* Width on li-elements in menu*/
     .menu-items {
@@ -243,11 +248,24 @@ form {
 
     /* Knapp home*/
     .HomeBtn {
-        padding: 3%;
-        margin-bottom: 3%;
-        float: right;
-        margin-right: 5%;
+        margin-left: 40%;
+        padding: 4%;
+        margin-bottom: 7%;
     }
+/*About*/
+    .aboutText{
+        margin: 0 auto;
+        width: 80%;
+        line-height: 25px;
+    }
+
+    /*Footer*/
+.footerclass{
+    background-color: rgb(3, 33, 3);
+    color: #ffffff;
+    padding: 2%;
+    line-height: 20px;
+}
 }
 
 @media only screen and (min-width: 801px) and (max-width: 1024px) {
@@ -399,6 +417,21 @@ form {
        display: block;
      
     }
+  /*About*/
+  .aboutText{
+    margin: 0 auto;
+    width: 70%;
+    line-height: 25px;
+}
+
+/*Footer*/
+.footerclass{
+background-color: rgb(3, 33, 3);
+color: #ffffff;
+padding: 2%;
+line-height: 20px;
+margin-top: 4%;
+}
 }
 
 @media only screen and (min-width: 1025px) {
@@ -428,7 +461,7 @@ form {
         align-items: flex;
     }
     .home-text-btn{
-       
+       margin-top: 3%;
         margin-left: 10%;
     }
     .textHome{
@@ -557,10 +590,24 @@ form {
      /* Knapp home*/
      .HomeBtn {
         padding: 2%;
-        margin-bottom: 3%;
+      
        margin: 0 auto;
        display: block;
      
     }
+/*About*/
+.aboutText{
+    margin: 0 auto;
+    width: 40%;
+    line-height: 25px;
+}
+
+/*Footer*/
+.footerclass{
+background-color: rgb(3, 33, 3);
+color: #ffffff;
+padding: 2%;
+line-height: 20px;
+}
 
 }

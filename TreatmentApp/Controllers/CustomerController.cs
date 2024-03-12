@@ -57,7 +57,7 @@ namespace TreatmentApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CustomerId,Firstname,Lastname,PhoneNumber,Date,ApiKeyRequired,TreatmentId")] Customer customer)
+        public async Task<IActionResult> Create([Bind("CustomerId,Firstname,Lastname,PhoneNumber,Date,TreatmentId")] Customer customer)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +91,7 @@ namespace TreatmentApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("CustomerId,Firstname,Lastname,PhoneNumber,Date,ApiKeyRequired,TreatmentId")] Customer customer)
+        public async Task<IActionResult> Edit(int id, [Bind("CustomerId,Firstname,Lastname,PhoneNumber,Date,TreatmentId")] Customer customer)
         {
             if (id != customer.CustomerId)
             {
