@@ -23,7 +23,11 @@
         <span>Färg</span>
     </div>
 </div>
- <OpeningHours/>
+ 
+ <div class="form-container">
+    <div class="opening-hours-container">
+<OpeningHours/>
+</div>
 <form>
     <fieldset>
        
@@ -79,6 +83,8 @@
     <button type="button" @onclick="SendPostRequest" disabled="@NotOpeningHours()">Submit</button>
 </form>
 
+
+</div>
 @code {
  
 

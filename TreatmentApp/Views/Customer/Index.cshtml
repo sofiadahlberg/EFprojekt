@@ -24,13 +24,14 @@
             <th>
                 @Html.DisplayNameFor(model => model.Date)
             </th>
-            <th>
+           @*  <th>
+                
                 @Html.DisplayNameFor(model => model.ApiKeyRequired)
-            </th>
+            </th> *@
             <th>
                 @Html.DisplayNameFor(model => model.Treatment)
             </th>
-            <th></th>
+            <th>Hantera</th>
         </tr>
     </thead>
     <tbody>
@@ -48,9 +49,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Date)
             </td>
-            <td>
+            @* <td>
+                 <label for="apiKeyRequired" class="visually-hidden">APIKeyRequired</label>
                 @Html.DisplayFor(modelItem => item.ApiKeyRequired)
-            </td>
+            </td> *@
             <td>
     @if (item.Treatment != null)
     {

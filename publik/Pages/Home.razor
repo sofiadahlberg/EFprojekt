@@ -5,9 +5,16 @@
 <PageTitle>Home</PageTitle>
  
 <h1>Ruddeby's frisör</h1>
+<button class="HomeBtn" @onclick="CustomerPage">Boka här</button>
+
+<div class="home-container">
+    
+<div class="opening-hours-container">
 <OpeningHours />
-<h2 class="h2Home">Din frisör i Ruddeby</h2>
-<p class="textHome"> Välkommen till Ruddebys Frisör, 
+</div>
+    <div class="home-text-btn">
+        <h2 class="h2Home">Din frisör i Ruddeby</h2>
+    <p class="textHome"> Välkommen till Ruddebys Frisör, 
     där skönhet och stil möts i en avslappnad
     och trivsam atmosfär. Vi är passionerade
     frisörer som älskar att skapa unika och 
@@ -22,8 +29,9 @@
     skräddarsydd hårvård. Ruddebys Frisör –
     där din skönhet får stråla!
 </p>
-<button class="HomeBtn" @onclick="CustomerPage">Boka här</button>
+</div>
 
+</div>
 @code {
     //Navigering till customer.razor
     private void CustomerPage()

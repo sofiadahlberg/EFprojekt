@@ -10,6 +10,10 @@ html {
   text-decoration: underline;
 }
 
+.nav-item:hover{
+text-decoration: underline;
+}
+
 
 @media (min-width: 768px) {
   html {

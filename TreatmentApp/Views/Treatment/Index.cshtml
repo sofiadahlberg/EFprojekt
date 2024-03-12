@@ -18,13 +18,13 @@
             <th>
                 @Html.DisplayNameFor(model => model.Category)
             </th>
-            <th>
+           @*  <th>
                 @Html.DisplayNameFor(model => model.ApiKeyRequired)
-            </th>
+            </th> *@
             <th>
                 @Html.DisplayNameFor(model => model.TimeInterval)
             </th>
-            <th></th>
+            <th>Knappar</th>
         </tr>
     </thead>
     <tbody>
@@ -36,9 +36,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Category)
             </td>
-            <td>
+           @*  <td>
                 @Html.DisplayFor(modelItem => item.ApiKeyRequired)
-            </td>
+            </td> *@
             <td>
                 @Html.DisplayFor(modelItem => item.TimeInterval.TimeIntervalId)
             </td>

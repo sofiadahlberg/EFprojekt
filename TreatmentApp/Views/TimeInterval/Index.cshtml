@@ -21,9 +21,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Available)
             </th>
-            <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.ApiKeyRequired)
-            </th>
+            </th> *@
             <th></th>
         </tr>
     </thead>
@@ -39,9 +39,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Available)
             </td>
-            <td>
+            @* <td>
                 @Html.DisplayFor(modelItem => item.ApiKeyRequired)
-            </td>
+            </td> *@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.TimeIntervalId" class="btn">Ändra</a> |
                 <a asp-action="Details" asp-route-id="@item.TimeIntervalId" class="btn">Detaljer</a> |
