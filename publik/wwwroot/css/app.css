@@ -16,14 +16,18 @@ h1 {
     color: #000000;
 }
 
+.menu-items li .aLink:hover {
+    text-decoration: underline;
+}
+
 .hamburger-menu {
     position: relative;
     margin: 2%;
-
+    
 }
 
 .menu-btn {
-    cursor: pointer;
+    
     display: block;
     padding: 10px;
 }
@@ -40,8 +44,17 @@ h1 {
     border: 1px solid #ddd;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: none;
-
-
+    
+}
+.AvailableBtn{
+    background-color: rgb(3, 33, 3);
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(253, 252, 252, 0.815);
+    border: white solid 1px;
+}
+.AvailableBtn:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .bar {
@@ -60,13 +73,14 @@ h1 {
     cursor: pointer;
     font-family: "Montserrat", sans-serif;
     font-size: 22px;
-    
+
 }
 
 .HomeBtn:hover {
     background-color: #bcd9cf;
     color: #000000;
     border: 2px solid #000000;
+    text-decoration: underline;
 }
 
 #menu-toggle {
@@ -90,37 +104,42 @@ h1 {
     display: block;
 }
 
+/*Li i menyn*/
 .menu-items li {
     padding: 10px;
     border-bottom: 0.5px solid #00013c;
-
 }
 
 
 /* Formulär på boka tid*/
 form {
-
     margin-top: 5%;
-
 }
 
 /*about*/
-.mailtext{
-color: #ffffff;
-text-decoration: none;
+.mailtext {
+    color: #ffffff;
+    text-decoration: none;
 }
 
-.mailtext:hover{
+.mailtext:hover {
     text-decoration: underline;
 }
 
+/*Available*/
+.availablediv{
+    margin: 0 auto;
+    border: black 2px solid;
+    
+    background-color: rgb(206, 206, 206);
+}
+.availablediv a{
+    color: #000000;
 
+}
 
 @media only screen and (max-width: 800px) {
-  
-
-
-    /* Width on li-elements in menu*/
+    /* Bredd på lielementen i menyn*/
     .menu-items {
         width: 100%;
     }
@@ -141,7 +160,7 @@ text-decoration: none;
         padding: 10px;
         /* Skuggning på div */
         box-shadow: inset 0 0 19px rgba(0, 0, 0, 0.5);
-    
+
     }
 
     .h2openingHours,
@@ -237,7 +256,6 @@ text-decoration: none;
         text-align: center;
     }
 
-
     .customerImg {
         display: block;
         /* Make the image a block element */
@@ -246,26 +264,52 @@ text-decoration: none;
         height: 80px;
     }
 
-    /* Knapp home*/
+    /*Home*/
+    .home-text-btn {
+        margin: 0 auto;
+        width: 80%;
+        line-height: 25px;
+    }
+
+    /* Knapp Home*/
     .HomeBtn {
         margin-left: 40%;
         padding: 4%;
         margin-bottom: 7%;
     }
-/*About*/
-    .aboutText{
+
+    /*About*/
+    .aboutText {
         margin: 0 auto;
         width: 80%;
         line-height: 25px;
     }
 
     /*Footer*/
-.footerclass{
-    background-color: rgb(3, 33, 3);
-    color: #ffffff;
-    padding: 2%;
-    line-height: 20px;
-}
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: rgb(3, 33, 3);
+        color: #ffffff;
+        padding: 2%;
+        line-height: 20px;
+    }
+
+    .AvailableBtn{
+        margin-right: 3%;
+        padding: 2%;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+    }
+
+    /*AvailablePage*/
+    .availablediv{
+        width: 80%;
+        padding: 3%;
+        line-height: 25px;
+        margin-bottom: 3%;
+    }
 }
 
 @media only screen and (min-width: 801px) and (max-width: 1024px) {
@@ -291,9 +335,10 @@ text-decoration: none;
         padding: 10px;
         /* Skuggning på div */
         box-shadow: inset 0 0 19px rgba(0, 0, 0, 0.5);
-       
+
     }
-    .textHome{
+
+    .textHome {
         margin: 0 auto;
         width: 60%;
         line-height: 25px;
@@ -403,35 +448,56 @@ text-decoration: none;
         margin: 0 auto;
         width: 50%;
     }
+
     .form-container {
         margin-top: 5%;
-       
-        
-      
-    }
-      /* Knapp home*/
-      .HomeBtn {
-        padding: 2%;
-       margin-right: 10%;
-       float: right;
-       display: block;
-     
-    }
-  /*About*/
-  .aboutText{
-    margin: 0 auto;
-    width: 70%;
-    line-height: 25px;
-}
 
-/*Footer*/
-.footerclass{
-background-color: rgb(3, 33, 3);
-color: #ffffff;
-padding: 2%;
-line-height: 20px;
-margin-top: 4%;
-}
+
+
+    }
+
+    /* Knapp home*/
+    .HomeBtn {
+        padding: 2%;
+        margin-right: 10%;
+        float: right;
+        display: block;
+
+    }
+
+    /*About*/
+    .aboutText {
+        margin: 0 auto;
+        width: 70%;
+        line-height: 25px;
+    }
+
+    
+      /*Footer*/
+      footer {
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: rgb(3, 33, 3);
+        color: #ffffff;
+        padding: 2%;
+        line-height: 20px;
+    }
+
+    .AvailableBtn{
+        margin-right: 3%;
+        padding: 2%;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+    }
+/*AvailablePage*/
+
+    .availablediv{
+        width: 80%;
+        padding: 3%;
+        line-height: 25px;
+    }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -444,6 +510,17 @@ margin-top: 4%;
 
     }
 
+    .menu-items {
+        position: absolute;
+        top: 40px;
+        width: 35%;
+        left: 0;
+        background-color: #bcd9cf;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
     /*Home*/
     .openingHoursDiv {
         width: 320px;
@@ -454,27 +531,32 @@ margin-top: 4%;
         margin-top: 15%;
         line-height: 25px;
     }
-    .form-container, .home-container {
+
+    .form-container,
+    .home-container {
         width: 90%;
         display: flex;
         justify-content: space-between;
         align-items: flex;
     }
-    .home-text-btn{
-       margin-top: 3%;
+
+    .home-text-btn {
+        margin-top: 3%;
         margin-left: 10%;
     }
-    .textHome{
+
+    .textHome {
         width: 100%;
     }
 
     .opening-hours-container {
-        width: 280px; /* Adjust the width as needed */
-        margin-left: 70px; 
+        width: 280px;
+        /* Adjust the width as needed */
+        margin-left: 70px;
         margin-top: 30px;
     }
 
-    .textHome{
+    .textHome {
         width: 60%;
         padding: 2%;
         line-height: 25px;
@@ -520,7 +602,6 @@ margin-top: 4%;
         font-family: sans-serif;
         box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
         text-align: center;
-
     }
 
     .icon-container1 {
@@ -587,27 +668,44 @@ margin-top: 4%;
         width: 60%;
     }
 
-     /* Knapp home*/
-     .HomeBtn {
+    /* Knapp home*/
+    .HomeBtn {
         padding: 2%;
-      
-       margin: 0 auto;
-       display: block;
-     
-    }
-/*About*/
-.aboutText{
-    margin: 0 auto;
-    width: 40%;
-    line-height: 25px;
-}
+        margin: 0 auto;
+        display: block;
 
-/*Footer*/
-.footerclass{
-background-color: rgb(3, 33, 3);
-color: #ffffff;
-padding: 2%;
-line-height: 20px;
-}
+    }
+
+    /*About*/
+    .aboutText {
+        margin: 0 auto;
+        width: 40%;
+        line-height: 25px;
+    }
+
+     /*Footer*/
+     footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: rgb(3, 33, 3);
+        color: #ffffff;
+        padding: 2%;
+        line-height: 20px;
+    }
+
+    .AvailableBtn{
+        margin-right: 3%;
+        padding: 1%;
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+    }
+
+    .availablediv{
+        width: 40%;
+        padding: 3%;
+        line-height: 25px;
+        margin-bottom: 3%;
+    }
 
 }
