@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "publik",
   "resources": {
-    "hash": "sha256-8HrCO8itvOTN8d+pVwI5AKpO92qAa9hK+05+6sVuJis=",
+    "hash": "sha256-pI7cEPStL4rl+loFJHFNARIy4347GyKzeoPd3skXxDs=",
     "jsModuleNative": {
       "dotnet.native.8.0.2.k185i3jrpi.js": "sha256-gPMK16QWoJSTxorlZJqcVtbBRTniIQWlLsJN2O4cJHg="
     },
@@ -213,10 +213,10 @@
       "mscorlib.wasm": "sha256-OH3kXneWqQMz6CUSo6POZqIeMqn9+5RR+IgHn5TnIwA=",
       "netstandard.wasm": "sha256-ZOswxXEbR2TmqjpbaBEdgr85Bv1NC4GwOwoJ+oxXM3M=",
       "System.Private.CoreLib.wasm": "sha256-I2w0iHf5nvSQyF1YE1VbgdTzmmz6a4OE6J7vo5wFa/4=",
-      "publik.wasm": "sha256-qT9g9RMenNI/Z/ORst9yXj+SbKTPMj5kucxSKIrUjHU="
+      "publik.wasm": "sha256-MBxKvxeUlgq2XVMB//NyxBFjD85lmK8mcvOMYKCZOro="
     },
     "pdb": {
-      "publik.pdb": "sha256-feioOfTqIqiEUVEi1FirjAUHAnS8mel7nGKaMrdve5U="
+      "publik.pdb": "sha256-oboRdlOdATdYfseP1HxKrY+4czZGFW08zxkmkk7KAI0="
     }
   },
   "cacheBootResources": true,

@@ -1,6 +1,8 @@
 ﻿@page "/customer"
 @inject HttpClient Http
-@using System.Globalization 
+@using System.Globalization
+@using System.ComponentModel.DataAnnotations;
+@using System.Collections.Generic;
 
 <PageTitle>Customer</PageTitle>
 
@@ -23,78 +25,85 @@
         <span>Färg</span>
     </div>
 </div>
- 
- <div class="form-container">
+
+<div class="form-container">
     <div class="opening-hours-container">
-<OpeningHours/>
-</div>
-<form>
-    <fieldset>
-       
-        <legend>Bokningsinformation</legend>
+        <OpeningHours />
+    </div>
+    <form>
+        <fieldset>
 
-        @* <div>
-        <label for="apiKeyRequired">API Key Required:</label>
-        <input id="apiKeyRequired" type="checkbox" @bind="postData.ApiKeyRequired" />
-        </div> *@
-        <div>
-    <label>Vilken vill du boka?</label>
-    @if (categoryTreatmentIds.ContainsKey(selectedContainer))
-    {
-        foreach (var treatment in TreatmentOptions.Where(t =>
-            categoryTreatmentIds[selectedContainer].Contains(t.TreatmentId)))
-        {
+            <legend>Bokningsinformation</legend>
             <div>
-                <input type="radio" id="@($"treatmentId_{treatment.TreatmentId}")" name="treatmentOptions"
-                       value="@treatment.TreatmentId" checked="@(selectedTreatmentId == treatment.TreatmentId)"
-                       @onchange="() => selectedTreatmentId = treatment.TreatmentId" />
-                <label for="@($"treatmentId_{treatment.TreatmentId}")">@treatment.Category</label>
+                <label>Vilken vill du boka?</label>
+                @if (categoryTreatmentIds.ContainsKey(selectedContainer))
+                {
+                    foreach (var treatment in TreatmentOptions.Where(t =>
+                    categoryTreatmentIds[selectedContainer].Contains(t.TreatmentId)))
+                    {
+                        <div>
+                            <input type="radio" id="@($"treatmentId_{treatment.TreatmentId}")" name="treatmentOptions"
+                                value="@treatment.TreatmentId" checked="@(selectedTreatmentId == treatment.TreatmentId)"
+                                @onchange="() => selectedTreatmentId = treatment.TreatmentId" />
+                            <label for="@($"treatmentId_{treatment.TreatmentId}")">@treatment.Category</label>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p>Du måste först välja en behandling innan du kan boka</p>
+                }
             </div>
-        }
-    }
-    else
-    {
-        <p>Du måste först välja en behandling innan du kan boka</p>
-    }
-</div>
 
-    </fieldset>
-    <fieldset>
-        <legend>Personlig information</legend>
-        <div>
-            <label for="firstName">Förnamn:</label>
-            <input id="firstName" @bind="postData.FirstName" />
+        </fieldset>
+        <fieldset>
+            <legend>Personlig information</legend>
+            <div>
+                <label for="firstName">Förnamn:</label>
+                <input id="firstName" @bind="postData.FirstName" />
+            </div>
+            <div>
+                <label for="lastName">Efternamn:</label>
+                <input id="lastName" @bind="postData.LastName" />
+            </div>
+            <div>
+                <label for="phoneNumber">Telefonnummer:</label>
+                <input id="phoneNumber" @bind="postData.PhoneNumber" />
+            </div>
+            <div>
+                <label for="DateTime">Datum och tid:</label>
+                <input id="DateTime" type="datetime-local" @bind="postData.Date" />
+            </div>
+            <div class="error-message">
+                @if (NotOpeningHours())
+                {
+                    <p>Vald tid eller datum är inte tillgänglig. Vänligen välj en annan.</p>
+                }
+            </div>
+        </fieldset>
+        <div class="success-message">
+            @if (isPostSuccessful)
+            {
+                <b>Meddelande skickat!</b>
+            }
         </div>
-        <div>
-            <label for="lastName">Efternamn:</label>
-            <input id="lastName" @bind="postData.LastName" />
-        </div>
-        <div>
-            <label for="phoneNumber">Telefonnummer:</label>
-            <input id="phoneNumber" @bind="postData.PhoneNumber" />
-        </div>
-          <div>
-            <label for="DateTime">Datum och tid:</label>
-            <input id="DateTime" type="datetime-local" @bind="postData.Date" />
-        </div>
-    </fieldset>
 
 
-    <button type="button" @onclick="SendPostRequest" disabled="@NotOpeningHours()">Submit</button>
-</form>
+        <button class="BookBtn" type="button" @onclick="SendPostRequest" disabled="@NotOpeningHours()">Boka Tid</button>
+    </form>
 
 
 </div>
 
 
 @code {
- 
+    @* private bool isDateOrTimeUnavailable = false; *@
 
     private List<Treatment> TreatmentOptions = new List<Treatment>();
     //Visar dagens datum
-       private int selectedContainer = 0;
+    private int selectedContainer = 0;
     private int selectedTreatmentId = 0;
-   
+
 
     private CustomerModel postData = new CustomerModel();
 
@@ -114,68 +123,100 @@
             return response ?? new List<Treatment>();
         }
     }
+    private ICollection<ValidationResult> ValidateForm()
+    {
+        var validationErrors = new List<ValidationResult>();
+        var validationContext = new ValidationContext(postData, serviceProvider: null, items: null);
 
-  private bool NotOpeningHours()
+        // Validate the form using data annotations
+        var isValid = Validator.TryValidateObject(postData, validationContext, validationErrors, validateAllProperties: true);
+
+        return validationErrors;
+    }
+
+    private bool NotOpeningHours()
     {
         var selectedDate = postData.Date?.ToLocalTime();
-        // Define your allowed week (Week 12)
-        var allowedWeek = 12;
 
-  // Check if the selected date is within the allowed week
-        if (selectedDate.HasValue && CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(selectedDate.Value, CalendarWeekRule.FirstDay, DayOfWeek.Monday) == allowedWeek)
+        if (selectedDate.HasValue)
         {
-        // Define your opening hours
-        var openingHours = new Dictionary<DayOfWeek, (TimeSpan opening, TimeSpan closing)>
-        {
-            [DayOfWeek.Monday] = (new TimeSpan(9, 0, 0), new TimeSpan(17, 0, 0)),
-            [DayOfWeek.Tuesday] = (new TimeSpan(9, 0, 0), new TimeSpan(17, 0, 0)),
-            [DayOfWeek.Wednesday] = (new TimeSpan(9, 0, 0), new TimeSpan(17, 0, 0)),
-            [DayOfWeek.Thursday] = (new TimeSpan(9, 0, 0), new TimeSpan(17, 0, 0)),
-            [DayOfWeek.Friday] = (new TimeSpan(9, 0, 0), new TimeSpan(14, 0, 0)),
-        };
+            // Define your allowed week (Week 12)
+            var allowedWeek = 12;
 
-        // Check if the selected date and time are within opening hours
-        if (selectedDate.HasValue && openingHours.ContainsKey(selectedDate.Value.DayOfWeek))
-        {
-            var (opening, closing) = openingHours[selectedDate.Value.DayOfWeek];
-            return !(selectedDate.Value.TimeOfDay >= opening && selectedDate.Value.TimeOfDay <= closing);
-        }
+            // Check if the selected date is within the allowed week
+            if (CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(selectedDate.Value, CalendarWeekRule.FirstDay, DayOfWeek.Monday)
+            == allowedWeek)
+            {
+                // Define your opening hours
+                var openingHours = new Dictionary<DayOfWeek, (TimeSpan opening, TimeSpan closing)>
+                    {
+                        [DayOfWeek.Monday] = (new TimeSpan(9, 0, 0), new TimeSpan(17, 0, 0)),
+                        [DayOfWeek.Tuesday] = (new TimeSpan(9, 0, 0), new TimeSpan(17, 0, 0)),
+                        [DayOfWeek.Wednesday] = (new TimeSpan(9, 0, 0), new TimeSpan(17, 0, 0)),
+                        [DayOfWeek.Thursday] = (new TimeSpan(9, 0, 0), new TimeSpan(17, 0, 0)),
+                        [DayOfWeek.Friday] = (new TimeSpan(9, 0, 0), new TimeSpan(14, 0, 0)),
+                    };
+
+                // Check if the selected date is a valid day
+                if (openingHours.ContainsKey(selectedDate.Value.DayOfWeek))
+                {
+                    var (opening, closing) = openingHours[selectedDate.Value.DayOfWeek];
+                    return !(selectedDate.Value.TimeOfDay >= opening && selectedDate.Value.TimeOfDay <= closing);
+                }
+            }
         }
 
         // If the selected date is on Saturday or Sunday, return true (outside opening hours)
         return true;
     }
 
-    
+    private bool isPostSuccessful = false;
+
     private async Task SendPostRequest()
     {
-        postData.TreatmentId = selectedTreatmentId;
-        var UrlAPI = "http://localhost:5099/api/customer";
-        using (var client = new HttpClient())
-        {
-            
-            var response = await client.PostAsJsonAsync(UrlAPI, postData);
+        var validationErrors = ValidateForm();
 
-            if (response.IsSuccessStatusCode)
+        // Check if the date or time is not available
+        if (NotOpeningHours())
+        {
+            if (validationErrors.Any())
             {
-                var result = await response.Content.ReadFromJsonAsync<Customer>();
-                
+                Console.WriteLine("Validation errors found.");
+                return;
             }
-            else
+
+            postData.TreatmentId = selectedTreatmentId;
+            var UrlAPI = "http://localhost:5099/api/customer";
+
+            using (var client = new HttpClient())
             {
-                Console.WriteLine($"POST request failed. Status code: {response.StatusCode}");
+
+                var response = await client.PostAsJsonAsync(UrlAPI, postData);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    isPostSuccessful = true;
+                    var result = await response.Content.ReadFromJsonAsync<Customer>();
+                }
+                else
+                {
+                    isPostSuccessful = false;
+                    Console.WriteLine($"POST request failed. Status code: {response.StatusCode}");
+
+                }
             }
+
         }
     }
 
     //För att välja en av de olika ikonerna / kategorierna
     string ContainerClass(int containerNumber) =>
-    selectedContainer == containerNumber ? "icon-container clicked" 
+    selectedContainer == containerNumber ? "icon-container clicked"
     : "icon-container" + containerNumber + " not-selected";
 
     private Dictionary<int, List<int>> categoryTreatmentIds
-         = new Dictionary<int, List<int>>
-{
+    = new Dictionary<int, List<int>>
+        {
 //Id för klippning
 { 1, new List<int> { 7, 8, 3 } },
 ////Id för klipp och färg
@@ -184,13 +225,13 @@
 { 3, new List<int> { 11, 13, 16 } },
 //Id förärg
 { 2, new List<int> { 4, 9, 10 } }
-};
+        };
     void SelectContainer(int containerNumber)
     {
         selectedContainer = containerNumber;
-        selectedTreatmentId = 0; 
-        
-            // Uppdaterar valt Id beroende på vilken kategori somväljs.
+        selectedTreatmentId = 0;
+
+        // Uppdaterar valt Id beroende på vilken kategori somväljs.
         selectedTreatmentId = categoryTreatmentIds.ContainsKey(containerNumber) ?
         categoryTreatmentIds[containerNumber].FirstOrDefault() :
         0;

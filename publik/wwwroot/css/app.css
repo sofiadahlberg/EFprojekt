@@ -23,13 +23,19 @@ h1 {
 .hamburger-menu {
     position: relative;
     margin: 2%;
-    
+
 }
 
 .menu-btn {
-    
+
     display: block;
     padding: 10px;
+}
+
+.success-message {
+    color: green;
+    margin-top: 10px;
+
 }
 
 .menu-items {
@@ -44,18 +50,32 @@ h1 {
     border: 1px solid #ddd;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: none;
-    
+
 }
-.AvailableBtn{
+
+.AvailableBtn {
     background-color: rgb(3, 33, 3);
     color: #ffffff;
     box-shadow: 0 2px 8px rgba(253, 252, 252, 0.815);
     border: white solid 1px;
 }
-.AvailableBtn:hover{
+
+/* .BookBtn:hover, */
+.AvailableBtn:hover {
     text-decoration: underline;
     cursor: pointer;
 }
+
+/* .BookBtn {
+    padding: 3%;
+    background-color: rgb(3, 33, 3);
+    margin-left: 60%;
+    margin-top: 3%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+} */
+
 
 .bar {
     display: block;
@@ -114,6 +134,7 @@ h1 {
 /* Formulär på boka tid*/
 form {
     margin-top: 5%;
+
 }
 
 /*about*/
@@ -127,18 +148,24 @@ form {
 }
 
 /*Available*/
-.availablediv{
+.availablediv {
     margin: 0 auto;
     border: black 2px solid;
-    
+
     background-color: rgb(206, 206, 206);
 }
-.availablediv a{
+
+.availablediv a {
     color: #000000;
 
 }
 
+.error-message{
+    color: red;
+}
+
 @media only screen and (max-width: 800px) {
+
     /* Bredd på lielementen i menyn*/
     .menu-items {
         width: 100%;
@@ -294,9 +321,10 @@ form {
         color: #ffffff;
         padding: 2%;
         line-height: 20px;
+        margin-top: 5%;
     }
 
-    .AvailableBtn{
+    .AvailableBtn {
         margin-right: 3%;
         padding: 2%;
         font-family: "Montserrat", sans-serif;
@@ -304,11 +332,18 @@ form {
     }
 
     /*AvailablePage*/
-    .availablediv{
+    .availablediv {
         width: 80%;
         padding: 3%;
         line-height: 25px;
         margin-bottom: 3%;
+    }
+
+    /*Meddelande skickat*/
+    .success-message {
+        margin-left: 30%;
+        font-size: 18px;
+        text-decoration: underline;
     }
 }
 
@@ -472,9 +507,9 @@ form {
         line-height: 25px;
     }
 
-    
-      /*Footer*/
-      footer {
+
+    /*Footer*/
+    footer {
         margin-top: 5%;
         display: flex;
         justify-content: space-between;
@@ -485,18 +520,25 @@ form {
         line-height: 20px;
     }
 
-    .AvailableBtn{
+    .AvailableBtn {
         margin-right: 3%;
         padding: 2%;
         font-family: "Montserrat", sans-serif;
         font-size: 14px;
     }
-/*AvailablePage*/
 
-    .availablediv{
+    /*AvailablePage*/
+
+    .availablediv {
         width: 80%;
         padding: 3%;
         line-height: 25px;
+    }
+     /*Meddelande skickat*/
+     .success-message {
+        margin-left: 40%;
+        font-size: 18px;
+        text-decoration: underline;
     }
 }
 
@@ -683,8 +725,8 @@ form {
         line-height: 25px;
     }
 
-     /*Footer*/
-     footer {
+    /*Footer*/
+    footer {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -692,20 +734,31 @@ form {
         color: #ffffff;
         padding: 2%;
         line-height: 20px;
+        margin-top: 5%;
     }
 
-    .AvailableBtn{
+    .AvailableBtn {
         margin-right: 3%;
         padding: 1%;
         font-family: "Montserrat", sans-serif;
         font-size: 16px;
     }
 
-    .availablediv{
+    .availablediv {
         width: 40%;
         padding: 3%;
         line-height: 25px;
         margin-bottom: 3%;
     }
 
+    form {
+        width: 100%;
+        line-height: 25px;
+    }
+ /*Meddelande skickat*/
+ .success-message {
+    margin-left: 40%;
+    font-size: 18px;
+    text-decoration: underline;
+}
 }
