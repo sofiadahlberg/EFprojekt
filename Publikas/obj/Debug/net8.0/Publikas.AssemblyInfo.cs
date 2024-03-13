@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Publikas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2ad52eb1de2def39b6a0ee10b1ef3a2982ebb18")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0fe6e536488880505982de0ab8b7be67263929fa")]
 [assembly: System.Reflection.AssemblyProductAttribute("Publikas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Publikas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Publikas",
   "resources": {
-    "hash": "sha256-YlXBmT+abBmyKIlapMWbkHt2tTpexu4sjP2dIY/tbPo=",
+    "hash": "sha256-fpKR+jQ3KvIefzsBt86335Oq0mgBWDfjAAv6AFg+24E=",
     "jsModuleNative": {
       "dotnet.native.8.0.2.k185i3jrpi.js": "sha256-gPMK16QWoJSTxorlZJqcVtbBRTniIQWlLsJN2O4cJHg="
     },
@@ -209,10 +209,10 @@
       "mscorlib.wasm": "sha256-OH3kXneWqQMz6CUSo6POZqIeMqn9+5RR+IgHn5TnIwA=",
       "netstandard.wasm": "sha256-ZOswxXEbR2TmqjpbaBEdgr85Bv1NC4GwOwoJ+oxXM3M=",
       "System.Private.CoreLib.wasm": "sha256-I2w0iHf5nvSQyF1YE1VbgdTzmmz6a4OE6J7vo5wFa/4=",
-      "Publikas.wasm": "sha256-4Gltwleap7x4bfn6Ux9w4s+DB8RUN9D32xrgS5eY5dk="
+      "Publikas.wasm": "sha256-QPwIJaOWvXmVyxINMmG68x/085mGfNueSZNUdUDCtUM="
     },
     "pdb": {
-      "Publikas.pdb": "sha256-ZKzUp0PG5RZsravRg86dL8hu2TCEQqevHoosnkO2hC4="
+      "Publikas.pdb": "sha256-RQgD2ZlsMejNQjqZ53uy/sSNCLfYqyxsWIT5byXqWp0="
     }
   },
   "cacheBootResources": true,

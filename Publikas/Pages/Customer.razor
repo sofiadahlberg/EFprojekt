@@ -76,12 +76,12 @@
                 <label for="DateTime">Datum och tid:</label>
                 <input id="DateTime" type="datetime-local" @bind="postData.Date" />
             </div>
-           @*  <div class="error-message">
+            <div class="error-message">
                 @if (NotOpeningHours())
                 {
                     <p>Vald tid eller datum är inte tillgänglig. Vänligen välj en annan.</p>
                 }
-            </div> *@
+            </div> 
         </fieldset>
         <div class="success-message">
             @if (isPostSuccessful)
