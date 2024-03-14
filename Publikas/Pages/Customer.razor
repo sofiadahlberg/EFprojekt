@@ -4,8 +4,6 @@
 @using System.ComponentModel.DataAnnotations
 @using System.Collections.Generic
 
-
-
 <PageTitle>Customer</PageTitle>
 
 <h1>Vad vill du göra?</h1>
@@ -60,33 +58,33 @@
         </fieldset>
         <fieldset>
             <legend>Personlig information</legend>
-            <div>
+            <div class="group-information">
                 <label for="firstName">Förnamn:</label>
                 <input id="firstName" @bind="postData.FirstName" />
             </div>
-            <div>
+            <div class="group-information">
                 <label for="lastName">Efternamn:</label>
                 <input id="lastName" @bind="postData.LastName" />
             </div>
-            <div>
+            <div class="group-information">
                 <label for="phoneNumber">Telefonnummer:</label>
                 <input id="phoneNumber" @bind="postData.PhoneNumber" />
             </div>
-            <div>
+            <div class="group-information">
                 <label for="DateTime">Datum och tid:</label>
                 <input id="DateTime" type="datetime-local" @bind="postData.Date" />
             </div>
             <div class="error-message">
                 @if (NotOpeningHours())
                 {
-                    <p>Vald tid eller datum är inte tillgänglig. Vänligen välj en annan.</p>
+                    <b>Vald tid eller datum är inte tillgänglig. Vänligen välj en annan.</b>
                 }
             </div> 
         </fieldset>
         <div class="success-message">
             @if (isPostSuccessful)
             {
-                <b>Meddelande skickat!</b>
+                <b>Din bokning har skickats!</b>
             }
         </div>
 
@@ -99,7 +97,7 @@
 
 
 @code {
-    @* private bool isDateOrTimeUnavailable = false; *@
+   
 
     private List<Treatment> TreatmentOptions = new List<Treatment>();
     //Visar dagens datum
@@ -128,7 +126,7 @@
         var validationErrors = new List<ValidationResult>();
         var validationContext = new ValidationContext(postData, serviceProvider: null, items: null);
 
-        // Validate the form using data annotations
+        // Validatera formulär
         var isValid = Validator.TryValidateObject(postData, validationContext, validationErrors, validateAllProperties: true);
 
         return validationErrors;
@@ -140,17 +138,17 @@
 
     if (selectedDate.HasValue)
     {
-        // Define your allowed week (Week 12)
+        // Definera vecka (12)
         var allowedWeek = 12;
 
-        // Check if the selected date is within the allowed week
+        // Kolla om valt datum är inom rätt vecka (och tider)
         if (CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(selectedDate.Value, CalendarWeekRule.FirstDay, DayOfWeek.Monday) != allowedWeek)
         {
             Console.WriteLine($"Invalid week. Expected: {allowedWeek}, Actual: {CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(selectedDate.Value, CalendarWeekRule.FirstDay, DayOfWeek.Monday)}, Date: {selectedDate.Value}");
-            return true; // Return true if not in the allowed week
+            return true; // Returna sant om det inte är rätt vecka t
         }
 
-        // Define your opening hours
+        // Definsera öppettiderna
         var openingHours = new Dictionary<DayOfWeek, (TimeSpan opening, TimeSpan closing)>
         {
             [DayOfWeek.Monday] = (new TimeSpan(9, 0, 0), new TimeSpan(17, 0, 0)),
@@ -160,15 +158,13 @@
             [DayOfWeek.Friday] = (new TimeSpan(9, 0, 0), new TimeSpan(14, 0, 0)),
         };
 
-        // Check if the selected date is a valid day
+       
         if (openingHours.ContainsKey(selectedDate.Value.DayOfWeek))
         {
             var (opening, closing) = openingHours[selectedDate.Value.DayOfWeek];
             return !(selectedDate.Value.TimeOfDay >= opening && selectedDate.Value.TimeOfDay <= closing);
         }
     }
-
-    // If the selected date is on Saturday or Sunday, return true (outside opening hours)
     return true;
 }
 
@@ -176,16 +172,8 @@
 
     private async Task SendPostRequest()
     {
-        try{
-
-        Console.WriteLine("Sent post request!"); // Add this line
-        
-           
+        try{   
         var validationErrors = ValidateForm();
-
-        // Check if the date or time is not available
-       @*  if (NotOpeningHours())
-        { *@
         
             if (validationErrors.Any())
             {
@@ -194,14 +182,7 @@
             }
 
             postData.TreatmentId = selectedTreatmentId;
-             // Print out the data before sending
-        Console.WriteLine("Data to be sent:");
-        Console.WriteLine($"FirstName: {postData.FirstName}");
-        Console.WriteLine($"LastName: {postData.LastName}");
-        Console.WriteLine($"PhoneNumber: {postData.PhoneNumber}");
-        Console.WriteLine($"Date: {postData.Date}");
-        Console.WriteLine($"TreatmentId: {postData.TreatmentId}");
-
+           
             var UrlAPI = "http://localhost:5099/api/customer";
 
             using (var client = new HttpClient())
@@ -222,8 +203,6 @@
 
                 }
             }
-
-       @*  } *@
     }
     catch (Exception ex)
     {
@@ -240,27 +219,27 @@
     private Dictionary<int, List<int>> categoryTreatmentIds
     = new Dictionary<int, List<int>>
         {
-//Id för klippning
-{ 1, new List<int> { 7, 8, 3 } },
-////Id för klipp och färg
-{ 4, new List<int> { 5, 6, 15 } },
-//Id för styling av hår
-{ 3, new List<int> { 11, 13, 16 } },
-//Id förärg
-{ 2, new List<int> { 4, 9, 10 } }
+            //Id för klippning
+            { 1, new List<int> { 7, 8, 3 } },
+            ////Id för klipp och färg
+            { 4, new List<int> { 5, 6, 15 } },
+            //Id för styling av hår
+            { 3, new List<int> { 11, 13, 16 } },
+            //Id för färg
+            { 2, new List<int> { 4, 9, 10 } }
         };
     void SelectContainer(int containerNumber)
     {
         selectedContainer = containerNumber;
         selectedTreatmentId = 0;
 
-        // Uppdaterar valt Id beroende på vilken kategori somväljs.
+        // Uppdaterar valt Id beroende på vilken kategori som väljs.
         selectedTreatmentId = categoryTreatmentIds.ContainsKey(containerNumber) ?
         categoryTreatmentIds[containerNumber].FirstOrDefault() :
         0;
 
     }
-
+//Customer och Treatment Model 
     public class CustomerModel
     {
         public string? FirstName { get; set; }

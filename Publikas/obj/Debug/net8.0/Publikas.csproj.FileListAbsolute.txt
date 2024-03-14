@@ -1,5 +1,6 @@
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js
+C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\dotnet-watch.wasm
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\dotnet.js
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.map
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.8.0.2.k185i3jrpi.js
@@ -256,6 +257,7 @@ C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Pub
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\System.Diagnostics.Process.wasm.gz
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XDocument.wasm.gz
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\Microsoft.VisualBasic.Core.wasm.gz
+C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\dotnet-watch.wasm.gz
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\System.Net.Requests.wasm.gz
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\System.IO.MemoryMappedFiles.wasm.gz
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\System.Threading.wasm.gz
@@ -415,6 +417,7 @@ C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Pub
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\Microsoft.AspNetCore.Components.WebAssembly.dll
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\dotnet-watch.dll
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
@@ -622,6 +625,7 @@ C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Pub
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.Web.wasm
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.WebAssembly.wasm
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Metadata.wasm
+C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\webcil\dotnet-watch.wasm
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\webcil\Microsoft.Extensions.Configuration.wasm
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\webcil\Microsoft.Extensions.Configuration.Abstractions.wasm
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\webcil\Microsoft.Extensions.Configuration.Binder.wasm
@@ -828,6 +832,7 @@ C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Pub
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\compressed\yqlonmhakg.gz
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\compressed\c248d8jis7.gz
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\compressed\tekv0579ks.gz
+C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\compressed\aa0nev17kr.gz
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\compressed\v1fwfsh67a.gz
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\compressed\3i0ij5fy9c.gz
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\compressed\w4pq6to70d.gz
@@ -1030,8 +1035,3 @@ C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Pub
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\refint\Publikas.dll
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\Publikas.pdb
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\ref\Publikas.dll
-C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\dotnet-watch.wasm
-C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\dotnet-watch.wasm.gz
-C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\bin\Debug\net8.0\dotnet-watch.dll
-C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\webcil\dotnet-watch.wasm
-C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\compressed\aa0nev17kr.gz

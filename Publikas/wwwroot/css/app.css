@@ -10,63 +10,115 @@ h1 {
     font-family: "Libre Baskerville", serif;
 }
 
-/* Navigering + meny*/
-.menu-items li .aLink {
-    text-decoration: none;
-    color: #000000;
-}
-
-.menu-items li .aLink:hover {
-    text-decoration: underline;
-}
-
-.hamburger-menu {
-    position: relative;
-    margin: 2%;
-
-}
-
-.menu-btn {
-
-    display: block;
-    padding: 10px;
-}
-
 .success-message {
     color: green;
     margin-top: 10px;
-
 }
 
-.menu-items {
+legend{
+    font-weight: bold;
+    margin-top: 3%;
+}
+
+/* Navigering + meny*/
+.menu-button {
+    position: fixed;
+    top: 60px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: #032103;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+  
+  .menu-button::before,   .menu-button::after  {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background-color: #fff;
+    transform: translateY(-5px);
+    transition: 0.2s;
+  }
+  
+
+.menu-button::before {
+    transform: translateY(-5px);
+}
+
+.menu-button::after {
+    transform: translateY(5px);
+}
+.menu-button.active::before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.menu-button.active::after {
+    transform: translateY(0px) rotate(-45deg);
+}
+
+  /* Navigation menu */
+  .menu-items {
+    display: none; /* Initially hide the menu */
+    position: fixed;
+    top: 20%;
+    right: 0;
+    width: 40%;
+    height: 50%;
+    background-color: rgb(3, 33, 3, 0.9);
+    z-index: 1;
+  }
+  
+  .menu-items ul {
     list-style: none;
     padding: 0;
     margin: 0;
     position: absolute;
-    top: 40px;
-    /* Adjust as needed */
-    left: 0;
-    background-color: #bcd9cf;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: none;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+  }
+  
+  .menu-items li {
+    padding: 20px;
+  }
+  
+  .menu-items a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  /* Show the menu when the checkbox is checked */
+  #menu-toggle:checked + .menu-button + .menu-items {
+    display: block;
+  }
+  
 
+input{
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+.group-information{
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .AvailableBtn {
-    background-color: rgb(3, 33, 3);
+    background-color: #032103;
     color: #ffffff;
-    box-shadow: 0 2px 8px rgba(253, 252, 252, 0.815);
+   
     border: white solid 1px;
 }
 
-/* .BookBtn:hover, */
-.AvailableBtn:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-/* .BookBtn {
+.BookBtn {
     padding: 3%;
     background-color: rgb(3, 33, 3);
     margin-left: 60%;
@@ -74,7 +126,7 @@ h1 {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     color: #ffffff;
-} */
+}
 
 
 .bar {
@@ -96,11 +148,12 @@ h1 {
 
 }
 
-.HomeBtn:hover {
+.HomeBtn:hover, .AvailableBtn:hover, .BookBtn:hover {
     background-color: #bcd9cf;
     color: #000000;
     border: 2px solid #000000;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 #menu-toggle {
@@ -130,14 +183,6 @@ h1 {
     border-bottom: 0.5px solid #00013c;
 }
 
-
-/* Formulär på boka tid*/
-form {
-    margin-top: 5%;
-
-}
-
-/*about*/
 .mailtext {
     color: #ffffff;
     text-decoration: none;
@@ -162,13 +207,14 @@ form {
 
 .error-message{
     color: red;
+
 }
 
 @media only screen and (max-width: 800px) {
 
     /* Bredd på lielementen i menyn*/
     .menu-items {
-        width: 100%;
+        width: 90%;
     }
 
     .headerImg {
@@ -244,11 +290,11 @@ form {
     }
 
     .icon-container2 {
-        grid-column: 1 / 1 / 2 / 2;
+        grid-area: 2 / 1 / 2 / 2;
     }
 
     .icon-container3 {
-        grid-column: 2 / 1 / 3 / 2;
+        grid-area: 1/ 2 / 2 / 3;
     }
 
     .icon-container4 {
@@ -359,7 +405,7 @@ form {
 
     /* Width on li-elements in menu*/
     .menu-items {
-        width: 70%;
+        width: 50%;
     }
 
     /*Home*/
@@ -395,7 +441,7 @@ form {
         display: grid;
         /* Change to grid instead of flex */
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(200px);
+        grid-template-rows: 200px;
         column-gap: 10px;
 
     }
@@ -447,7 +493,7 @@ form {
     .icon-container4 span {
         display: block;
         /* Make the span a block element */
-        margin-bottom: 5px;
+        margin-bottom: 5px
         /* Add some space between the span and the image */
     }
 
@@ -472,9 +518,7 @@ form {
 
     .customerImg {
         display: block;
-        /* Make the image a block element */
         margin: 0 auto;
-        /* Center the image horizontally */
         height: 80px;
     }
 
@@ -486,12 +530,9 @@ form {
 
     .form-container {
         margin-top: 5%;
-
-
-
     }
 
-    /* Knapp home*/
+    /* HomeBtn*/
     .HomeBtn {
         padding: 2%;
         margin-right: 10%;
@@ -519,6 +560,13 @@ form {
         padding: 2%;
         line-height: 20px;
     }
+ /*AvailableSida + knapp*/
+
+    .availablediv {
+        width: 80%;
+        padding: 3%;
+        line-height: 25px;
+    }
 
     .AvailableBtn {
         margin-right: 3%;
@@ -527,13 +575,7 @@ form {
         font-size: 14px;
     }
 
-    /*AvailablePage*/
-
-    .availablediv {
-        width: 80%;
-        padding: 3%;
-        line-height: 25px;
-    }
+   
      /*Meddelande skickat*/
      .success-message {
         margin-left: 40%;
@@ -549,19 +591,9 @@ form {
         height: auto;
         max-width: 1300px;
         margin: 0 auto;
-
     }
 
-    .menu-items {
-        position: absolute;
-        top: 40px;
-        width: 35%;
-        left: 0;
-        background-color: #bcd9cf;
-        border: 1px solid #ddd;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        display: none;
-    }
+   
 
     /*Home*/
     .openingHoursDiv {
@@ -573,13 +605,13 @@ form {
         margin-top: 15%;
         line-height: 25px;
     }
-
+/* För att få OpeningHourkomponenten bredvid på start och bokatid-sidorna */
     .form-container,
     .home-container {
         width: 90%;
         display: flex;
         justify-content: space-between;
-        align-items: flex;
+      
     }
 
     .home-text-btn {
@@ -590,14 +622,13 @@ form {
     .textHome {
         width: 100%;
     }
-
+/* OpeningHour-komponenten*/
     .opening-hours-container {
         width: 280px;
-        /* Adjust the width as needed */
         margin-left: 70px;
         margin-top: 30px;
     }
-
+/*Informationstext på startsidan */
     .textHome {
         width: 60%;
         padding: 2%;
@@ -619,9 +650,8 @@ form {
         width: 80%;
         margin: 0 auto;
         display: grid;
-        /* Change to grid instead of flex */
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(200px);
+        grid-template-rows: 200px;
         column-gap: 5px;
         cursor: pointer;
     }
@@ -645,25 +675,23 @@ form {
         box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
         text-align: center;
     }
-
+/* Placering med Grid */
     .icon-container1 {
         grid-area: 1 / span 1;
-        /* Row 1, Column 1 */
     }
 
     .icon-container2 {
         grid-column: 2 / span 1;
-        /* Start from column 2 and span 1 column */
     }
 
     .icon-container3 {
         grid-column: 3 / span 1;
-        /* Start from column 3 and span 1 column */
+   
     }
 
     .icon-container4 {
         grid-column: 4 / span 1;
-        /* Start from column 4 and span 1 column */
+     
     }
 
     .icon-container1 span,
@@ -671,14 +699,12 @@ form {
     .icon-container3 span,
     .icon-container4 span {
         display: block;
-        /* Make the span a block element */
         margin-bottom: 5px;
-        /* Add some space between the span and the image */
     }
 
     .icon-container.clicked {
+        /* Border för markerad div */
         border: rgb(19, 84, 188) 3px solid;
-        /* Border color for the clicked div */
         background-color: #d1cfcf;
         padding: 20px;
         border-radius: 10px;

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gO6qAnPEU8Hv0N9jJzUCn1hM7fJF7oMFnidjeAgF4Ng=",
+  "Hash": "imNKB9GnYl+eZR1/AJEhCEfZTK7olAUqIeRl/48+3Gg=",
   "Source": "TreatmentApp",
   "BasePath": "_content/TreatmentApp",
   "Mode": "Default",
@@ -1231,25 +1231,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
-    },
-    {
-      "Identity": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\TreatmentApp\\wwwroot\\js\\site.js",
-      "SourceId": "TreatmentApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\TreatmentApp\\wwwroot\\",
-      "BasePath": "_content/TreatmentApp",
-      "RelativePath": "js/site.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
       "Identity": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\TreatmentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
