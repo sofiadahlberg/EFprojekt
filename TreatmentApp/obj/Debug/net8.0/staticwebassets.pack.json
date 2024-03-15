@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\TreatmentApp\\wwwroot\\images\\admin200.jpg",
+      "PackagePath": "staticwebassets\\images\\admin200.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\TreatmentApp\\wwwroot\\images\\admin400.jpg",
+      "PackagePath": "staticwebassets\\images\\admin400.jpg"
+    },
+    {
       "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\TreatmentApp\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
