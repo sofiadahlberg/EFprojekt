@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TreatmentApp.Models{
 public class Treatment{
-    //Properties
+    //Properties/Egenskaper
     public int TreatmentId { get; set; }
      [Display(Name = "Längd (minuter)")]
     public int Duration { get; set; }

@@ -52,8 +52,6 @@ namespace TreatmentApp.Controllers
         }
 
         // POST: TimeInterval/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("TimeIntervalId,StartTime,EndTime,Available")] TimeInterval timeInterval)
@@ -84,9 +82,7 @@ namespace TreatmentApp.Controllers
         }
 
         // POST: TimeInterval/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+       [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("TimeIntervalId,StartTime,EndTime,Available,ApiKeyRequired")] TimeInterval timeInterval)
         {

@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TreatmentApp.Models; 
 public class TimeInterval{
+ //Properties/Egenskaper
 
     public int TimeIntervalId {get; set;}
      [Display(Name = "Startid ")]

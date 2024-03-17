@@ -3,7 +3,7 @@ namespace TreatmentApp.Models;
 
 public class Customer
 {
-  //Properties/egenskaper
+  //Properties/Egenskaper
   public int CustomerId { get; set; }
   [Required]
   [Display(Name = "Förnamn")]
@@ -22,7 +22,7 @@ public class Customer
   [Display(Name = "Behandling")]
   public int? TreatmentId { get; set; }
 
-  // Navigation 
+  // Navigation
   [Display(Name = "Behandling")]
   public Treatment? Treatment { get; set; }
 }

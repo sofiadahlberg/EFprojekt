@@ -22,7 +22,7 @@ namespace MyApp.Namespace
         {
             return Ok(await _context.Customers.ToListAsync());
         }
-
+/* Hämtar categories från treatment för att kunna skriva ut de på sidan */
         [HttpGet("categories")]
         public IActionResult GetCategories()
         {

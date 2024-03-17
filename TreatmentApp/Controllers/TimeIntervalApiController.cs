@@ -29,17 +29,17 @@ public async Task<IActionResult> DeleteTimeInterval(int id)
 
         if (timeInterval == null)
         {
-            return NotFound(); // Return 404 Not Found if the record doesn't exist
+            return NotFound(); // Return 404 gick inte att hitta
         }
 
         _context.TimeIntervals.Remove(timeInterval);
         await _context.SaveChangesAsync();
 
-        return NoContent(); // Return 204 No Content on successful deletion
+        return NoContent(); // Returnera 204
     }
     catch (Exception ex)
     {
-        // Log or handle the exception as needed
+        // Logga fel eller hantera
         return StatusCode(500, $"Internal Server Error: {ex.Message}");
     }
 }

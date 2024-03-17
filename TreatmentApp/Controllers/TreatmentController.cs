@@ -55,8 +55,6 @@ namespace TreatmentApp.Controllers
         }
 
         // POST: Treatment/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("TreatmentId,Duration,Category,TimeIntervalId")] Treatment treatment)
@@ -89,8 +87,6 @@ namespace TreatmentApp.Controllers
         }
 
         // POST: Treatment/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("TreatmentId,Duration,Category,TimeIntervalId")] Treatment treatment)
