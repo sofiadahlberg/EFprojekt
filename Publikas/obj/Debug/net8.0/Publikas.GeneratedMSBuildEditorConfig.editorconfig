@@ -13,51 +13,51 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = Publikas
 build_property.RootNamespace = Publikas
-build_property.ProjectDir = C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\
+build_property.ProjectDir = C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\EFCloned\EFprojekt\Publikas\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas
+build_property.MSBuildProjectDirectory = C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\EFCloned\EFprojekt\Publikas
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/Publikas/App.razor]
+[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/EFCloned/EFprojekt/Publikas/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/Publikas/Layout/Footer.razor]
+[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/EFCloned/EFprojekt/Publikas/Layout/Footer.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XEZvb3Rlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/Publikas/Layout/OpeningHours.razor]
+[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/EFCloned/EFprojekt/Publikas/Layout/OpeningHours.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE9wZW5pbmdIb3Vycy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/Publikas/Pages/About.razor]
+[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/EFCloned/EFprojekt/Publikas/Pages/About.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/Publikas/Pages/Available.razor]
+[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/EFCloned/EFprojekt/Publikas/Pages/Available.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXZhaWxhYmxlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/Publikas/Pages/Customer.razor]
+[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/EFCloned/EFprojekt/Publikas/Pages/Customer.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/Publikas/Pages/Home.razor]
+[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/EFCloned/EFprojekt/Publikas/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/Publikas/_Imports.razor]
+[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/EFCloned/EFprojekt/Publikas/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/Publikas/Layout/MainLayout.razor]
+[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/EFCloned/EFprojekt/Publikas/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-tbvsmoxks8
 
-[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/Publikas/Layout/NavMenu.razor]
+[C:/Users/Sofia Dahlberg/OneDrive/Dokument/Webbutvecklare/.net core/EFprojekt/EFCloned/EFprojekt/Publikas/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-2fk2y9w6xn

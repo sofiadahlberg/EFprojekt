@@ -8839,11 +8839,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\TreatmentApp\\TreatmentApp.csproj",
+      "projectUniqueName": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\TreatmentApp\\TreatmentApp.csproj",
       "projectName": "TreatmentApp",
-      "projectPath": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\TreatmentApp\\TreatmentApp.csproj",
+      "projectPath": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\TreatmentApp\\TreatmentApp.csproj",
       "packagesPath": "C:\\Users\\Sofia Dahlberg\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\TreatmentApp\\obj\\",
+      "outputPath": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\TreatmentApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

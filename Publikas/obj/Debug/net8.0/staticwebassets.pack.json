@@ -1,123 +1,123 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\obj\\Debug\\net8.0\\compressed\\fjybnwcs2j.gz",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\obj\\Debug\\net8.0\\compressed\\fjybnwcs2j.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Publikas.styles.css",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Publikas.styles.css",
       "PackagePath": "staticwebassets\\Publikas.styles.css"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\amy-lewis-mGEVuLZNAxY-unsplash.jpg",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\amy-lewis-mGEVuLZNAxY-unsplash.jpg",
       "PackagePath": "staticwebassets\\images\\amy-lewis-mGEVuLZNAxY-unsplash.jpg"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\brush-50.png",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\brush-50.png",
       "PackagePath": "staticwebassets\\images\\brush-50.png"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\cut-scissor-icon.webp",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\cut-scissor-icon.webp",
       "PackagePath": "staticwebassets\\images\\cut-scissor-icon.webp"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\hair-dryer-64.png",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\hair-dryer-64.png",
       "PackagePath": "staticwebassets\\images\\hair-dryer-64.png"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\hair-dryer.png",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\hair-dryer.png",
       "PackagePath": "staticwebassets\\images\\hair-dryer.png"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\hair1200.jpg",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\hair1200.jpg",
       "PackagePath": "staticwebassets\\images\\hair1200.jpg"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\hair1600(1).jpg",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\hair1600(1).jpg",
       "PackagePath": "staticwebassets\\images\\hair1600(1).jpg"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\hair1600.jpg",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\hair1600.jpg",
       "PackagePath": "staticwebassets\\images\\hair1600.jpg"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\hair600.jpg",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\hair600.jpg",
       "PackagePath": "staticwebassets\\images\\hair600.jpg"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\hair800(1).jpg",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\hair800(1).jpg",
       "PackagePath": "staticwebassets\\images\\hair800(1).jpg"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\hair800.jpg",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\hair800.jpg",
       "PackagePath": "staticwebassets\\images\\hair800.jpg"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\hairdress.jpg",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\hairdress.jpg",
       "PackagePath": "staticwebassets\\images\\hairdress.jpg"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\hairdryer-53.png",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\hairdryer-53.png",
       "PackagePath": "staticwebassets\\images\\hairdryer-53.png"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\hairdryer-icon.webp",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\hairdryer-icon.webp",
       "PackagePath": "staticwebassets\\images\\hairdryer-icon.webp"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\paint-100.png",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\paint-100.png",
       "PackagePath": "staticwebassets\\images\\paint-100.png"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\paintbrush-64.png",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\paintbrush-64.png",
       "PackagePath": "staticwebassets\\images\\paintbrush-64.png"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\palette-128.png",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\palette-128.png",
       "PackagePath": "staticwebassets\\images\\palette-128.png"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\photo-1600948836101-f9ffda59d250.avif",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\photo-1600948836101-f9ffda59d250.avif",
       "PackagePath": "staticwebassets\\images\\photo-1600948836101-f9ffda59d250.avif"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\pmv-chamara-OXYOFT9gTOE-unsplash.jpg",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\pmv-chamara-OXYOFT9gTOE-unsplash.jpg",
       "PackagePath": "staticwebassets\\images\\pmv-chamara-OXYOFT9gTOE-unsplash.jpg"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\pmv-chamara-qg_OBqY5dA0-unsplash.jpg",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\pmv-chamara-qg_OBqY5dA0-unsplash.jpg",
       "PackagePath": "staticwebassets\\images\\pmv-chamara-qg_OBqY5dA0-unsplash.jpg"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\scissor-64(1).png",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\scissor-64(1).png",
       "PackagePath": "staticwebassets\\images\\scissor-64(1).png"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\scissors-128.png",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\scissors-128.png",
       "PackagePath": "staticwebassets\\images\\scissors-128.png"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\scissors-64.png",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\scissors-64.png",
       "PackagePath": "staticwebassets\\images\\scissors-64.png"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\scissush-128.png",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\scissush-128.png",
       "PackagePath": "staticwebassets\\images\\scissush-128.png"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\images\\scissush64.png",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\images\\scissush64.png",
       "PackagePath": "staticwebassets\\images\\scissush64.png"
     },
     {
-      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\wwwroot\\index.html",
+      "Id": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {

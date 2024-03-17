@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d1jhbc+ajfUIGy+px3Sl13mqXZFMDb31dnmirfIkyy8xjHlK0cJKzHBu13qSnsypa216A5l0oiGSj8/FMuaTNQ==",
+  "dgSpecHash": "PhR+4ST/09tQcjhJmqFNb2NTuBACLzvjbw4avmvTYNhTIAeWN2d71C74prefDzbQQxaLN+Fabnh4Cyb3NckG0A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\TreatmentApp\\TreatmentApp.csproj",
+  "projectFilePath": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\TreatmentApp\\TreatmentApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sofia Dahlberg\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Sofia Dahlberg\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

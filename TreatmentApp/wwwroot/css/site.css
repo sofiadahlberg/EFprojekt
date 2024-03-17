@@ -4,6 +4,7 @@ html {
 .btn{
   background-color: #4c0202;
   color: #ffffff;
+  margin-top: 2%;
 }
 .btn:hover{
   color: #ffffff;

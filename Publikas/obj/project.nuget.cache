@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eIYc0aC15ZqV1GRDSOn2t4+zmORBvEP9u8yh6TMD+4EuAi1AcSHg0aOQb/akQlKOaQlYm5MhCLVSgAXUgFJAeA==",
+  "dgSpecHash": "gPwKS1V6ag4sY02YgGkAucE5W720uPvU2bIxsBsw80CDznXhBWi8oWpJX3YZBhBY90Qyrd4IrSmbgi07oVpnZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\Publikas\\Publikas.csproj",
+  "projectFilePath": "C:\\Users\\Sofia Dahlberg\\OneDrive\\Dokument\\Webbutvecklare\\.net core\\EFprojekt\\EFCloned\\EFprojekt\\Publikas\\Publikas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sofia Dahlberg\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.2\\microsoft.aspnetcore.authorization.8.0.2.nupkg.sha512",
     "C:\\Users\\Sofia Dahlberg\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.2\\microsoft.aspnetcore.components.8.0.2.nupkg.sha512",
