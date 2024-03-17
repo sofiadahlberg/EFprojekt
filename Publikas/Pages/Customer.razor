@@ -125,7 +125,7 @@ VT 2024---
             return response ?? new List<Treatment>();
         }
     }
-          // Validatera formulär
+          // Validera formulär
     private ICollection<ValidationResult> ValidateForm()
     {
         var validationErrors = new List<ValidationResult>();
@@ -150,7 +150,6 @@ VT 2024---
         // Kolla om valt datum är inom rätt vecka (och tider)
         if (CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(selectedDate.Value, CalendarWeekRule.FirstDay, DayOfWeek.Monday) != allowedWeek)
         {
-            Console.WriteLine($"Invalid week. Expected: {allowedWeek}, Actual: {CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(selectedDate.Value, CalendarWeekRule.FirstDay, DayOfWeek.Monday)}, Date: {selectedDate.Value}");
             return true; // Returna sant om det inte är rätt vecka 
         }
 
