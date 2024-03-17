@@ -1035,7 +1035,9 @@ C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Pub
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\refint\Publikas.dll
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\Publikas.pdb
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\Publikas\obj\Debug\net8.0\ref\Publikas.dll
+C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\EFCloned\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\EFCloned\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js
+C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\EFCloned\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\dotnet-watch.wasm
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\EFCloned\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\dotnet.js
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\EFCloned\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.map
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\EFCloned\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.8.0.2.k185i3jrpi.js
@@ -1045,8 +1047,6 @@ C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\EFC
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\EFCloned\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\icudt_CJK.dat
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\EFCloned\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\icudt_EFIGS.dat
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\EFCloned\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\icudt_no_CJK.dat
-C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\EFCloned\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
-C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\EFCloned\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\dotnet-watch.wasm
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\EFCloned\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.wasm
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\EFCloned\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.wasm
 C:\Users\Sofia Dahlberg\OneDrive\Dokument\Webbutvecklare\.net core\EFprojekt\EFCloned\EFprojekt\Publikas\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.wasm

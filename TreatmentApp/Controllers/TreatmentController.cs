@@ -50,7 +50,7 @@ namespace TreatmentApp.Controllers
         // GET: Treatment/Create
         public IActionResult Create()
         {
-            ViewData["TimeIntervalId"] = new SelectList(_context.TimeIntervals, "TimeIntervalId", "TimeIntervalId");
+            ViewData["TimeIntervalId"] = new SelectList(_context.TimeIntervals, "TimeIntervalId", "StartTime");
             return View();
         }
 

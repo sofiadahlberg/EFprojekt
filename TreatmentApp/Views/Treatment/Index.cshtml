@@ -18,10 +18,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.Category)
                 </th>
-                <th>
+               @*  <th>
            
                 @Html.DisplayNameFor(model => model.TimeInterval)
-            </th>
+            </th> *@
             
             <th>Hantera</th>
         </tr>
@@ -35,9 +35,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Category)
             </td>
-            <td>
+            @* <td>
                 @Html.DisplayFor(modelItem => item.TimeInterval.TimeIntervalId)
-            </td>
+            </td> *@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.TreatmentId" class="btn">Ändra</a> |
                 <a asp-action="Details" asp-route-id="@item.TreatmentId" class="btn">Detaljer</a> |
