@@ -1,33 +1,41 @@
-﻿
-    <div class="topdiv">
-        <picture>  <source media="(max-width:800px)" srcset="/images/hair600.jpg" alt="Hair Image">
-<source media="(max-width:1024px)" class="headerImg" srcset="/images/hair800.jpg" alt="Hair Image">
-<img src="/images/hair1600.jpg" class="headerImg" alt="Hair Image">
-</picture>  
+﻿@* ---Webbutvecklingsprogrammet
+Webbutveckling med .NET DT191G 
+Sofia Dahlberg 
+VT 2024---
+ *@
+ 
+<div class="topdiv">
+    <picture>
+        <source media="(max-width:800px)" srcset="/images/hair600.jpg" alt="Frisörsalong som visar tre frisörstolar med tre speglar på väggen">
+        <source media="(max-width:1024px)" class="headerImg" srcset="/images/hair800.jpg" alt="Frisörsalong som visar tre frisörstolar med tre speglar på väggen">
+        <img src="/images/hair1600.jpg" class="headerImg" alt="Frisörsalong som visar tre frisörstolar med tre speglar på väggen">
+    </picture>
 </div>
 
 <div class="hamburger-menu" role="navigation" aria-label="Huvudmeny">
     <input type="checkbox" id="menu-toggle" @onclick="ToggleMenu">
     <label for="menu-toggle" class="menu-button @(isMenuOpen ? "active" : "")">
-    
+
     </label>
-<nav class="menu-items">
-    <ul>
-       
-        <li>
-            <NavLink href="" class="aLink">Startsida</NavLink>
+    <nav class="menu-items">
+        <ul>
+
+            <li>
+                <NavLink href="" class="aLink">Startsida</NavLink>
             </li>
-        <li>
-            <NavLink href="customer" class="aLink">Boka tid</NavLink>
-            </li> 
-        <li>
-            <NavLink href="about" class="aLink">Om oss</NavLink>
+            <li>
+                <NavLink href="customer" class="aLink">Boka tid</NavLink>
             </li>
-    </ul>
+            <li>
+                <NavLink href="about" class="aLink">Om oss</NavLink>
+            </li>
+        </ul>
     </nav>
 </div>
 
 @code {
+
+/*Om menyn är öppen eller stängd*/
     private bool isMenuOpen = false;
 
     private void ToggleMenu()

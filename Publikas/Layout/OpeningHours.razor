@@ -1,8 +1,13 @@
-
+@* ---Webbutvecklingsprogrammet
+Webbutveckling med .NET DT191G 
+Sofia Dahlberg 
+VT 2024---
+ *@
 
 <div class="openingHoursDiv">
     <h2 class="h2openingHours">Våra öppettider under vecka 12:</h2>
 <ul>
+    @* Beroende på om available är true eller false skrivs Fullbokat eller tider finns att boka ut  *@
     @foreach (var timeInterval in timeIntervals)
     {
         <li> @GetOpeningTime(timeInterval.StartTime, timeInterval.EndTime) 
@@ -35,7 +40,7 @@
 
     }
 
-    // TimeIntervall
+    // TimeIntervall-metod
     public class TimeInterval
     {
         public int TimeIntervalId { get; set; }
@@ -49,18 +54,21 @@
     private string GetOpeningTime(DateTime startTime, DateTime endTime)
     {
         string dayOfWeek = GetSwedish(startTime.DayOfWeek);
+        //Öppnar det 9 och slutar 17 ska dag och de tiderna skrivas ut
 
         if (startTime.TimeOfDay == TimeSpan.FromHours(9) && endTime.TimeOfDay == TimeSpan.FromHours(17))
         {
             return $"{dayOfWeek}: 9-17";
         }
+        //Annars ska dagen och öppettiderna som skiljer sig skrivas ut. 
         else 
         {
+            
             return $"{dayOfWeek}: {startTime.Hour} - {endTime.Hour}";
         }
     }
 
-    // Method to get Swedish day name
+    // Metod för att skriva ut dagarna på svenska 
 private string GetSwedish(DayOfWeek dayOfWeek)
 {
     switch (dayOfWeek)

@@ -1,3 +1,9 @@
+/*  ---Webbutvecklingsprogrammet
+Webbutveckling med .NET DT191G 
+Sofia Dahlberg 
+VT 2024--- */
+
+/* Allmän kod för alla storlekar */
 body {
     margin: 0;
     font-family: "Montserrat", sans-serif;
@@ -10,12 +16,19 @@ h1 {
     font-family: "Libre Baskerville", serif;
 }
 
+/* Bekräftelsemeddelande vid lyckat post-anrop */
 .success-message {
     color: green;
     margin-top: 10px;
 }
 
-legend{
+/* Felmeddelande om datum och tid inte är inom öppettiderna */
+.error-message {
+    color: red;
+
+}
+
+legend {
     font-weight: bold;
     margin-top: 3%;
 }
@@ -33,9 +46,10 @@ legend{
     justify-content: center;
     align-items: center;
     border: none;
-  }
-  
-  .menu-button::before,   .menu-button::after  {
+}
+
+.menu-button::before,
+.menu-button::after {
     content: "";
     position: absolute;
     width: 28px;
@@ -43,8 +57,8 @@ legend{
     background-color: #fff;
     transform: translateY(-5px);
     transition: 0.2s;
-  }
-  
+}
+
 
 .menu-button::before {
     transform: translateY(-5px);
@@ -53,6 +67,7 @@ legend{
 .menu-button::after {
     transform: translateY(5px);
 }
+
 .menu-button.active::before {
     transform: translateY(0px) rotate(45deg);
 }
@@ -61,60 +76,68 @@ legend{
     transform: translateY(0px) rotate(-45deg);
 }
 
-  /* Navigation menu */
-  .menu-items {
-    display: none; /* Initially hide the menu */
+/* Navigation menu */
+.menu-items {
+    display: none;
+    /* Initially hide the menu */
     position: fixed;
     top: 20%;
     right: 0;
-    width: 40%;
+
     height: 50%;
     background-color: rgb(3, 33, 3, 0.9);
     z-index: 1;
-  }
-  
-  .menu-items ul {
+}
+
+.menu-items ul {
     list-style: none;
     padding: 0;
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
-    
     transform: translate(-50%, -50%);
-  }
-  
-  .menu-items li {
+}
+
+.menu-items li {
     padding: 20px;
-  }
-  
-  .menu-items a {
+}
+
+.menu-items a {
     text-decoration: none;
     color: #fff;
     font-size: 18px;
-  }
-  
-  /* Show the menu when the checkbox is checked */
-  #menu-toggle:checked + .menu-button + .menu-items {
-    display: block;
-  }
-  
+}
 
-input{
+.menu-items a:hover {
+    text-decoration: underline;
+}
+
+/* Visa menyn om checkbox är itryckt */
+#menu-toggle:checked+.menu-button+.menu-items {
+    display: block;
+}
+
+/* Visar inte checkbox */
+#menu-toggle {
+    display: none;
+}
+
+input {
     padding: 2%;
     margin-bottom: 2%;
 }
 
-.group-information{
+.group-information {
     display: block;
     margin: 0;
     padding: 0;
 }
 
+/* Knappar + hover*/
 .AvailableBtn {
     background-color: #032103;
     color: #ffffff;
-   
     border: white solid 1px;
 }
 
@@ -128,27 +151,17 @@ input{
     color: #ffffff;
 }
 
-
-.bar {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-/* Knapp home + hover*/
 .HomeBtn {
     background-color: rgb(3, 33, 3);
     color: #ffffff;
     cursor: pointer;
     font-family: "Montserrat", sans-serif;
     font-size: 22px;
-
 }
 
-.HomeBtn:hover, .AvailableBtn:hover, .BookBtn:hover {
+.HomeBtn:hover,
+.AvailableBtn:hover,
+.BookBtn:hover {
     background-color: #bcd9cf;
     color: #000000;
     border: 2px solid #000000;
@@ -156,32 +169,6 @@ input{
     cursor: pointer;
 }
 
-#menu-toggle {
-    display: none;
-}
-
-#menu-toggle:checked+.menu-button .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-#menu-toggle:checked+.menu-button .bar:nth-child(2) {
-    opacity: 0;
-}
-
-#menu-toggle:checked+.menu-button .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
-
-#menu-toggle:checked+.menu-button+.menu-items {
-    display: block;
-}
-
-/*Li i menyn*/
-.menu-items li {
-    padding: 10px;
-    border-bottom: 0.5px solid #00013c;
-}
 
 .mailtext {
     color: #ffffff;
@@ -192,40 +179,31 @@ input{
     text-decoration: underline;
 }
 
-/*Available*/
+/*Available-sidan*/
 .availablediv {
     margin: 0 auto;
     border: black 2px solid;
-
     background-color: rgb(206, 206, 206);
 }
 
 .availablediv a {
     color: #000000;
-
-}
-
-.error-message{
-    color: red;
-
 }
 
 @media only screen and (max-width: 800px) {
 
     /* Bredd på lielementen i menyn*/
     .menu-items {
-        width: 90%;
+        width: 70%;
     }
 
     .headerImg {
         width: 100%;
         height: auto;
-
         margin: 0 auto;
-
     }
 
-    /*Home*/
+    /*Home-sida*/
     .openingHoursDiv {
         margin: 0 auto;
         width: 280px;
@@ -233,9 +211,23 @@ input{
         padding: 10px;
         /* Skuggning på div */
         box-shadow: inset 0 0 19px rgba(0, 0, 0, 0.5);
-
     }
 
+    /*Home*/
+    .home-text-btn {
+        margin: 0 auto;
+        width: 80%;
+        line-height: 25px;
+    }
+
+    /* Knapp Home*/
+    .HomeBtn {
+        margin-left: 40%;
+        padding: 4%;
+        margin-bottom: 7%;
+    }
+
+    /* Opening-hours- komponent */
     .h2openingHours,
     .h2Home {
         text-align: center;
@@ -250,8 +242,8 @@ input{
         font-family: "Montserrat", sans-serif;
     }
 
-    /*Customer*/
-    /*Container över imgdivarna */
+    /*Customer - sida*/
+    /*Container över kategorierna (ikoner) */
     .category-container {
         margin: 0 auto;
         width: 80%;
@@ -262,8 +254,6 @@ input{
 
     }
 
-
-    /* Container över bilder*/
     .icon-container1,
     .icon-container2,
     .icon-container3,
@@ -284,9 +274,9 @@ input{
         cursor: pointer;
     }
 
+    /* Grid-placering */
     .icon-container1 {
         grid-area: 1 / 1 / 2 / 2;
-        /* Row 1, Column 1 */
     }
 
     .icon-container2 {
@@ -306,14 +296,14 @@ input{
     .icon-container3 span,
     .icon-container4 span {
         display: block;
-        /* Make the span a block element */
+        /* Block-element */
         margin-bottom: 1px;
-        /* Add some space between the span and the image */
+
     }
 
     .icon-container.clicked {
+        /* Border-färg runt vald div */
         border: rgb(19, 84, 188) 3px solid;
-        /* Border color for the clicked div */
         background-color: #d1cfcf;
         padding: 20px;
         border-radius: 10px;
@@ -331,27 +321,11 @@ input{
 
     .customerImg {
         display: block;
-        /* Make the image a block element */
         margin: 0 auto;
-        /* Center the image horizontally */
         height: 80px;
     }
 
-    /*Home*/
-    .home-text-btn {
-        margin: 0 auto;
-        width: 80%;
-        line-height: 25px;
-    }
-
-    /* Knapp Home*/
-    .HomeBtn {
-        margin-left: 40%;
-        padding: 4%;
-        margin-bottom: 7%;
-    }
-
-    /*About*/
+    /*About-sida*/
     .aboutText {
         margin: 0 auto;
         width: 80%;
@@ -370,12 +344,7 @@ input{
         margin-top: 5%;
     }
 
-    .AvailableBtn {
-        margin-right: 3%;
-        padding: 2%;
-        font-family: "Montserrat", sans-serif;
-        font-size: 14px;
-    }
+
 
     /*AvailablePage*/
     .availablediv {
@@ -385,7 +354,14 @@ input{
         margin-bottom: 3%;
     }
 
-    /*Meddelande skickat*/
+    .AvailableBtn {
+        margin-right: 3%;
+        padding: 2%;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+    }
+
+    /*Vid lyckat post-anrop*/
     .success-message {
         margin-left: 30%;
         font-size: 18px;
@@ -403,12 +379,13 @@ input{
 
     }
 
-    /* Width on li-elements in menu*/
+    /* Bredd på li-elementen i menyn*/
     .menu-items {
-        width: 50%;
+        width: 40%;
+        margin-right: 5%;
     }
 
-    /*Home*/
+    /*Home-sidan*/
     .openingHoursDiv {
         margin: 0 auto;
         width: 280px;
@@ -439,14 +416,14 @@ input{
         width: 80%;
         margin: 0 auto;
         display: grid;
-        /* Change to grid instead of flex */
+        /* Grid */
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 200px;
         column-gap: 10px;
 
     }
 
-    /* Container över bilder*/
+    /* Container över kategorierna (ikoner)*/
     .icon-container1,
     .icon-container2,
     .icon-container3,
@@ -469,22 +446,18 @@ input{
 
     .icon-container1 {
         grid-area: 1 / span 1;
-        /* Row 1, Column 1 */
     }
 
     .icon-container2 {
         grid-column: 2 / span 1;
-        /* Start from column 2 and span 1 column */
     }
 
     .icon-container3 {
         grid-column: 3 / span 1;
-        /* Start from column 3 and span 1 column */
     }
 
     .icon-container4 {
         grid-column: 4 / span 1;
-        /* Start from column 4 and span 1 column */
     }
 
     .icon-container1 span,
@@ -492,14 +465,12 @@ input{
     .icon-container3 span,
     .icon-container4 span {
         display: block;
-        /* Make the span a block element */
-        margin-bottom: 5px
-        /* Add some space between the span and the image */
+        margin-bottom: 5px;
     }
 
     .icon-container.clicked {
+        /* Border-färg vid vald behandlingskategori*/
         border: rgb(19, 84, 188) 3px solid;
-        /* Border color for the clicked div */
         background-color: #d1cfcf;
         padding: 20px;
         border-radius: 10px;
@@ -514,7 +485,6 @@ input{
         box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
         text-align: center;
     }
-
 
     .customerImg {
         display: block;
@@ -538,10 +508,9 @@ input{
         margin-right: 10%;
         float: right;
         display: block;
-
     }
 
-    /*About*/
+    /*About-sidan*/
     .aboutText {
         margin: 0 auto;
         width: 70%;
@@ -560,8 +529,8 @@ input{
         padding: 2%;
         line-height: 20px;
     }
- /*AvailableSida + knapp*/
 
+    /*AvailableSida + knapp*/
     .availablediv {
         width: 80%;
         padding: 3%;
@@ -575,9 +544,8 @@ input{
         font-size: 14px;
     }
 
-   
-     /*Meddelande skickat*/
-     .success-message {
+    /*Meddelande vid lyckat post-anrop*/
+    .success-message {
         margin-left: 40%;
         font-size: 18px;
         text-decoration: underline;
@@ -593,9 +561,13 @@ input{
         margin: 0 auto;
     }
 
-   
+    /* Bredd på lielementen i menyn*/
+    .menu-items {
+        width: 30%;
+        margin-right: 5%;
+    }
 
-    /*Home*/
+    /*Home-sidan*/
     .openingHoursDiv {
         width: 320px;
         border: 1px solid #a7a8a8;
@@ -605,13 +577,14 @@ input{
         margin-top: 15%;
         line-height: 25px;
     }
-/* För att få OpeningHourkomponenten bredvid på start och bokatid-sidorna */
+
+    /* För att få OpeningHourkomponenten bredvid annat innehål
+     på start och boka tid-sidorna */
     .form-container,
     .home-container {
         width: 90%;
         display: flex;
         justify-content: space-between;
-      
     }
 
     .home-text-btn {
@@ -622,13 +595,15 @@ input{
     .textHome {
         width: 100%;
     }
-/* OpeningHour-komponenten*/
+
+    /* OpeningHour-komponenten*/
     .opening-hours-container {
         width: 280px;
         margin-left: 70px;
         margin-top: 30px;
     }
-/*Informationstext på startsidan */
+
+    /*Informationstext på startsidan */
     .textHome {
         width: 60%;
         padding: 2%;
@@ -656,7 +631,7 @@ input{
         cursor: pointer;
     }
 
-    /* Container över bilder*/
+    /* Container över behandlingskategorierna (ikoner)*/
     .icon-container1,
     .icon-container2,
     .icon-container3,
@@ -675,7 +650,8 @@ input{
         box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
         text-align: center;
     }
-/* Placering med Grid */
+
+    /* Placering med Grid */
     .icon-container1 {
         grid-area: 1 / span 1;
     }
@@ -686,12 +662,11 @@ input{
 
     .icon-container3 {
         grid-column: 3 / span 1;
-   
     }
 
     .icon-container4 {
         grid-column: 4 / span 1;
-     
+
     }
 
     .icon-container1 span,
@@ -723,9 +698,7 @@ input{
 
     .customerImg {
         display: block;
-        /* Make the image a block element */
         margin: 0 auto;
-        /* Center the image horizontally */
         height: 80px;
     }
 
@@ -744,7 +717,7 @@ input{
 
     }
 
-    /*About*/
+    /*Aboutö-sidan*/
     .aboutText {
         margin: 0 auto;
         width: 40%;
@@ -781,10 +754,11 @@ input{
         width: 100%;
         line-height: 25px;
     }
- /*Meddelande skickat*/
- .success-message {
-    margin-left: 40%;
-    font-size: 18px;
-    text-decoration: underline;
-}
+
+    /*Meddelande vid lyckat post-anrop*/
+    .success-message {
+        margin-left: 40%;
+        font-size: 18px;
+        text-decoration: underline;
+    }
 }

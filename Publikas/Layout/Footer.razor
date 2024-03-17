@@ -1,4 +1,10 @@
 @inject NavigationManager Navigation
+
+@* ---Webbutvecklingsprogrammet
+Webbutveckling med .NET DT191G 
+Sofia Dahlberg 
+VT 2024---
+ *@
 <footer>
     <div class="footerclass">
 <b> Uppgifter:</b><br><br>
@@ -12,7 +18,7 @@
     <button class="AvailableBtn" @onclick="AvailablePage">Tillgänglighetsredogörelse</button>
 </footer>
 @code {
-    //Navigering till customer.razor
+    //Navigering till Customer.razor
     private void AvailablePage()
     {
         Navigation.NavigateTo("/available");
